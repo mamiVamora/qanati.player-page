@@ -104,14 +104,14 @@ const Downloads = () => {
         {
             id: 'android',
             titleKey: 'downloads.categories.android',
-            icon: '📱',
+            icon: '🤖',
             stores: [
                 { id: 'google-play', name: 'Google Play', url: '#', available: false },
-                { id: 'amazon', name: 'Amazon Appstore', url: '#', available: true },
+                { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
                 { id: 'huawei', name: 'Huawei AppGallery', url: '#', available: false },
-                { id: 'apk', name: 'تحميل مباشر (APK)', url: '#', available: true, badge: 'عام' },
-                { id: 'apkpure', name: 'APKPure', url: '#', available: true },
-                { id: 'uptodown', name: 'Uptodown', url: '#', available: true }
+                { id: 'apk', name: 'تحميل مباشر (APK)', url: '#', available: false, badge: 'عام' },
+                { id: 'apkpure', name: 'APKPure', url: 'https://apkpure.com/p/com.qanati.player', available: true },
+                { id: 'uptodown', name: 'Uptodown', url: '#', available: false }
             ]
         },
         {
@@ -127,16 +127,16 @@ const Downloads = () => {
             titleKey: 'downloads.categories.smarttv',
             icon: '📺',
             stores: [
-                { id: 'samsung', name: 'Samsung TV', url: '#', available: true },
-                { id: 'lg', name: 'LG webOS', url: '#', available: true }
+                { id: 'samsung', name: 'Samsung TV', url: '#', available: false },
+                { id: 'lg', name: 'LG webOS', url: '#', available: false }
             ]
         },
         {
             id: 'windows',
             titleKey: 'downloads.categories.windows',
-            icon: '💻',
+            icon: '🪟',
             stores: [
-                { id: 'microsoft', name: 'Microsoft Store', url: '#', available: true }
+                { id: 'microsoft', name: 'Microsoft Store', url: 'https://apps.microsoft.com/detail/9NH6MK4ZZRG7?hl=en-us&gl=SA&ocid=pdpshare', available: true }
             ]
         }
     ];

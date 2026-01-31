@@ -8,8 +8,6 @@
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://player.qanati.site/ar"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://player.qanati.site/en"/>
   </url>
   
   <!-- صفحة الخصوصية -->
@@ -28,13 +26,7 @@
     <priority>0.6</priority>
   </url>
   
-  <!-- اتصل بنا -->
-  <url>
-    <loc>https://player.qanati.site/contact</loc>
-    <lastmod>2026-01-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
   
   <!-- سياسة الملكية الفكرية -->
   <url>

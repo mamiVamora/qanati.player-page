@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Hero from './sections/Hero';
+import Trust from './sections/Trust';
+import WhyUs from './sections/WhyUs';
 import Features from './sections/Features';
 import Downloads from './sections/Downloads';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -14,6 +16,8 @@ import './styles/global.css';
 const HomePage = () => (
   <>
     <Hero />
+    <Trust />
+    <WhyUs />
     <Features />
     <Downloads />
   </>
