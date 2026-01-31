@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════════════
+   نظام الألوان - Qanati Player
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    /* ───────────────────────────────────────────────────────
+     الألوان الأساسية (Primary Colors)
+     ─────────────────────────────────────────────────────── */
+    --color-cyan: #00E5FF;
+    --color-cyan-light: #33EBFF;
+    --color-cyan-dark: #00B8D4;
+
+    --color-magenta: #E91E63;
+    --color-magenta-light: #FF4081;
+    --color-magenta-dark: #C2185B;
+
+    --color-purple: #9C27B0;
+    --color-purple-light: #BA68C8;
+    --color-purple-dark: #7B1FA2;
+
+    /* ───────────────────────────────────────────────────────
+     الألوان الإضافية (Accent Colors)
+     ─────────────────────────────────────────────────────── */
+    --color-gold: #FFD700;
+    --color-gold-light: #FFE55C;
+    --color-gold-dark: #FFC107;
+
+    --color-electric-blue: #00F0FF;
+    --color-neon-pink: #FF10F0;
+
+    /* ───────────────────────────────────────────────────────
+     الخلفيات (Backgrounds)
+     ─────────────────────────────────────────────────────── */
+    --bg-primary: #0A0E1A;
+    --bg-secondary: #141927;
+    --bg-tertiary: #1E2538;
+
+    /* خلفيات زجاجية (Glassmorphism) */
+    --glass-bg: rgba(20, 25, 39, 0.6);
+    --glass-bg-hover: rgba(20, 25, 39, 0.8);
+    --glass-border: rgba(0, 229, 255, 0.2);
+
+    /* ───────────────────────────────────────────────────────
+     التوهج (Glow Effects)
+     ─────────────────────────────────────────────────────── */
+    --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.5),
+        0 0 40px rgba(0, 229, 255, 0.3),
+        0 0 60px rgba(0, 229, 255, 0.1);
+
+    --glow-magenta: 0 0 20px rgba(233, 30, 99, 0.5),
+        0 0 40px rgba(233, 30, 99, 0.3),
+        0 0 60px rgba(233, 30, 99, 0.1);
+
+    --glow-purple: 0 0 20px rgba(156, 39, 176, 0.5),
+        0 0 40px rgba(156, 39, 176, 0.3),
+        0 0 60px rgba(156, 39, 176, 0.1);
+
+    /* ───────────────────────────────────────────────────────
+     التدرجات (Gradients)
+     ─────────────────────────────────────────────────────── */
+
+    /* تدرج سيان → بنفسجي */
+    --gradient-primary: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+
+    /* تدرج سيان → وردي */
+    --gradient-secondary: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-magenta) 100%);
+
+    /* تدرج ثلاثي (سيان → بنفسجي → وردي) */
+    --gradient-triple: linear-gradient(135deg,
+            var(--color-cyan) 0%,
+            var(--color-purple) 50%,
+            var(--color-magenta) 100%);
+
+    /* تدرج شعاعي */
+    --gradient-radial: radial-gradient(circle,
+            var(--color-cyan) 0%,
+            var(--color-purple) 50%,
+            var(--bg-primary) 100%);
+
+    /* تدرج نصي متحرك */
+    --gradient-text-animate: linear-gradient(90deg,
+            var(--color-cyan),
+            var(--color-purple),
+            var(--color-magenta),
+            var(--color-cyan));
+
+    /* ───────────────────────────────────────────────────────
+     الظلال (Shadows)
+     ─────────────────────────────────────────────────────── */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.7);
+}

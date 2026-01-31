@@ -1,0 +1,367 @@
+/* ═══════════════════════════════════════════════════════════
+   Footer - Glassmorphism Luxury with Colorful Links
+   ═══════════════════════════════════════════════════════════ */
+
+.footer {
+    padding: 4rem 0 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 0%,
+            rgba(0, 229, 255, 0.05),
+            transparent 50%),
+        radial-gradient(circle at 70% 100%,
+            rgba(233, 30, 99, 0.05),
+            transparent 50%);
+    z-index: -1;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Grid
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Column
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-column {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-column {
+        text-align: right;
+    }
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: var(--weight-bold);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-magenta));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+    margin-bottom: 0.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-tagline {
+    font-size: 1rem;
+    color: rgba(0, 229, 255, 0.8);
+    line-height: var(--leading-relaxed);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Links - Colorful & Artistic
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--glass-bg);
+    border: 2px solid;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: var(--weight-semibold);
+}
+
+/* Cyan Links */
+.link-cyan {
+    color: var(--color-cyan);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.link-cyan:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--color-cyan);
+    box-shadow: var(--glow-cyan);
+    transform: translateX(-4px) scale(1.05);
+}
+
+/* Magenta Links */
+.link-magenta {
+    color: var(--color-magenta);
+    border-color: rgba(233, 30, 99, 0.3);
+}
+
+.link-magenta:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--color-magenta);
+    box-shadow: var(--glow-magenta);
+    transform: translateX(-4px) scale(1.05);
+}
+
+/* Purple Links */
+.link-purple {
+    color: var(--color-purple);
+    border-color: rgba(156, 39, 176, 0.3);
+}
+
+.link-purple:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--color-purple);
+    box-shadow: var(--glow-purple);
+    transform: translateX(-4px) scale(1.05);
+}
+
+/* Gold Links */
+.link-gold {
+    color: var(--color-gold);
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.link-gold:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--color-gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transform: translateX(-4px) scale(1.05);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Contact Section
+   ═══════════════════════════════════════════════════════════ */
+
+.contact-label {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.footer-email {
+    display: block;
+    background: var(--glass-bg);
+    border: 2px solid var(--color-cyan);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: var(--color-cyan);
+    text-align: center;
+    direction: ltr;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-email:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+    transform: scale(1.02);
+}
+
+.footer-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(37, 211, 102, 0.1));
+    border: 2px solid #25D366;
+    border-radius: 12px;
+    padding: 0.875rem 1.25rem;
+    color: #25D366;
+    text-decoration: none;
+    font-weight: var(--weight-semibold);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+}
+
+.footer-whatsapp:hover {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.3), rgba(37, 211, 102, 0.15));
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.4);
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    font-size: 1.5rem;
+}
+
+.whatsapp-text {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .footer-email,
+    .footer-whatsapp {
+        text-align: right;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Warning Section
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-warning {
+    background: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.warning-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.warning-text {
+    font-size: 0.9375rem;
+    line-height: var(--leading-relaxed);
+    color: rgba(255, 152, 0, 0.9);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Bottom / Copyright - Luxury Edition
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.crafted-text {
+    font-size: 1rem;
+    font-weight: var(--weight-semibold);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.company-highlight {
+    background: linear-gradient(90deg,
+            var(--color-cyan),
+            var(--color-magenta),
+            var(--color-purple),
+            var(--color-gold));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--weight-extrabold);
+    font-size: 1.125rem;
+    animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.copyright-text {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-container {
+        padding: 0 1rem;
+    }
+
+    .footer-grid {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-title {
+        font-size: 1.125rem;
+    }
+
+    .footer-brand {
+        font-size: 1.25rem;
+    }
+
+    .footer-warning {
+        padding: 1.5rem;
+    }
+
+    .warning-text {
+        font-size: 0.875rem;
+    }
+
+    .footer-whatsapp {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

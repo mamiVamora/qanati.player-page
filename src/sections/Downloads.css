@@ -1,0 +1,270 @@
+/* ═══════════════════════════════════════════════════════════
+   Downloads Section - Categorized by Platform
+   ═══════════════════════════════════════════════════════════ */
+
+.downloads {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.downloads-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Header
+   ═══════════════════════════════════════════════════════════ */
+
+.downloads-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.downloads-title {
+  font-size: 3rem;
+  font-weight: var(--weight-extrabold);
+  margin-bottom: 1rem;
+}
+
+.downloads-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-cyan);
+  opacity: 0.9;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Category Sections
+   ═══════════════════════════════════════════════════════════ */
+
+.download-category {
+  margin-bottom: 5rem;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-icon {
+  font-size: 2.5rem;
+}
+
+/* Different colors for each category */
+.download-category:nth-child(2) .category-title {
+  color: var(--color-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.download-category:nth-child(3) .category-title {
+  color: var(--color-magenta);
+  text-shadow: var(--glow-magenta);
+}
+
+.download-category:nth-child(4) .category-title {
+  color: var(--color-purple);
+  text-shadow: var(--glow-purple);
+}
+
+.download-category:nth-child(5) .category-title {
+  color: var(--color-gold);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Grid
+   ═══════════════════════════════════════════════════════════ */
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .stores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Store Card - Glassmorphism
+   ═══════════════════════════════════════════════════════════ */
+
+.store-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid var(--color-cyan);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.store-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 20px;
+  background: radial-gradient(circle at center,
+      rgba(0, 229, 255, 0.1),
+      transparent 70%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.store-card.store-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+.store-card.store-disabled::before {
+  background: radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.05),
+      transparent 70%);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Store Logo
+   ═══════════════════════════════════════════════════════════ */
+
+.store-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.store-logo svg {
+  width: 60px;
+  height: 60px;
+  color: var(--color-cyan);
+}
+
+.store-disabled .store-logo svg {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Store Info
+   ═══════════════════════════════════════════════════════════ */
+
+.store-info {
+  width: 100%;
+}
+
+.store-name {
+  font-size: 1.25rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 0.5rem;
+  color: var(--color-cyan);
+}
+
+.store-disabled .store-name {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.store-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 229, 255, 0.2);
+  border: 1px solid var(--color-cyan);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: var(--color-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.store-action {
+  font-size: 0.9375rem;
+  color: rgba(0, 229, 255, 0.8);
+}
+
+.store-status {
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: rgba(255, 215, 0, 0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .downloads {
+    padding: 5rem 0;
+  }
+
+  .downloads-container {
+    padding: 0 1rem;
+  }
+
+  .downloads-header {
+    margin-bottom: 4rem;
+  }
+
+  .downloads-title {
+    font-size: 2.5rem;
+  }
+
+  .downloads-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .download-category {
+    margin-bottom: 4rem;
+  }
+
+  .category-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+  }
+
+  .store-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .store-name {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,30 @@
+# Qanati Player - Robots.txt
+
+User-agent: *
+Allow: /
+
+# تحسين الفهرسة
+Sitemap: https://player.qanati.site/sitemap.xml
+
+# منع فهرسة ملفات النظام
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+
+# السماح بفهرسة الصور
+Allow: /logo.jpg
+Allow: /icons/
+Allow: /images/
+
+# معدل الزحف
+Crawl-delay: 1
+
+# محركات بحث محددة
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /

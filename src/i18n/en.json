@@ -1,0 +1,23 @@
+{
+    "hero": {
+        "title": "Qanati Player",
+        "subtitle": "The Golden Standard for Premium Viewing",
+        "description": "Not just a media player, but a complete cinema in your pocket",
+        "cta": "Download Now"
+    },
+    "features": {
+        "sectionTitle": "Exceptional Features",
+        "sectionSubtitle": "Advanced technology redefining the viewing experience",
+        "categories": {
+            "engine": "Technical Engine",
+            "visual": "Visual Experience",
+            "smart": "Intelligence & Customization"
+        },
+        "items": {
+            "mediakit": {
+                "title": "Revolutionary MediaKit Engine",
+                "description": "The world's most powerful video processing engine, ensuring seamless 4K and HDR playback"
+            }
+        }
+    }
+}
