@@ -226,28 +226,28 @@
         },
         "comparisons": {
             "engine": {
-                "feature": "Playback Engine",
-                "qanati": "MediaKit Engine (4K HDR)",
-                "others": "Default Android engines",
-                "highlights": "Seamless playback with no stutter"
+                "feature": "Channel Opening (Zap Speed)",
+                "qanati": "0.4 seconds (Instant)",
+                "others": "1.5 - 3.0 seconds",
+                "highlights": "Fastest global response via MediaKit"
             },
             "multiview": {
-                "feature": "Multi-View",
-                "qanati": "4 synchronized screens in full resolution",
-                "others": "Single screen only",
-                "highlights": "Independent audio control per screen"
+                "feature": "Motion Stability (FPS)",
+                "qanati": "Fluid 60 FPS (Rock Solid)",
+                "others": "Heavy jitter & drops",
+                "highlights": "Perfect lip-sync and smooth action"
             },
             "performance": {
-                "feature": "Performance \u0026 Hardware",
-                "qanati": "Live Stats",
-                "others": "No stats available",
-                "highlights": "Detect latency and RAM usage"
+                "feature": "Resource Footprint (CPU)",
+                "qanati": "15% - Cool Performance",
+                "others": "45%+ - High Temperature",
+                "highlights": "Extended battery life & CPU safety"
             },
             "efficiency": {
-                "feature": "Resource Efficiency",
-                "qanati": "Smart decoding (AV1/H.265)",
-                "others": "High battery usage",
-                "highlights": "Lower device temperature"
+                "feature": "Encryption & Data Security",
+                "qanati": "Military 256-bit Encryption",
+                "others": "Legacy / No Encryption",
+                "highlights": "Full privacy for resellers & clients"
             }
         },
         "cards": {

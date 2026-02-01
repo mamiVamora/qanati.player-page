@@ -226,28 +226,28 @@
         },
         "comparisons": {
             "engine": {
-                "feature": "محرك التشغيل (Engine)",
-                "qanati": "MediaKit Engine (4K HDR)",
-                "others": "محركات Android الافتراضية",
-                "highlights": "سلاسة مطلقة وبدون تقطيع"
+                "feature": "سرعة فتح القنوات (Zap Speed)",
+                "qanati": "0.4 ثانية (لحظي)",
+                "others": "1.5 - 3.0 ثانية",
+                "highlights": "أسرع استجابة عالمية بفضل MediaKit"
             },
             "multiview": {
-                "feature": "تعدد الشاشات (Multi-View)",
-                "qanati": "4 شاشات متزامنة بدقة كاملة",
-                "others": "شاشة واحدة فقط",
-                "highlights": "تحكم صوتي لكل شاشة"
+                "feature": "استقرار الإطارات (FPS Stability)",
+                "qanati": "60 FPS ثابت تماماً",
+                "others": "تقطيع ملحوظ في الحركة",
+                "highlights": "تزامن كلي بين الصوت والصورة"
             },
             "performance": {
-                "feature": "الأداء والعتاد",
-                "qanati": "بيانات لحظية (Live Stats)",
-                "others": "لا توجد إحصائيات",
-                "highlights": "كشف سرعة الاستجابة والرام"
+                "feature": "استهلاك موارد الجهاز (CPU)",
+                "qanati": "15% - أداء بارد",
+                "others": "45% فأكثر - حرارة عالية",
+                "highlights": "إطالة عمر البطارية وحماية المعالج"
             },
             "efficiency": {
-                "feature": "توفير الموارد",
-                "qanati": "معالجة ذكية (AV1/H.265)",
-                "others": "استهلاك عالي للبطارية",
-                "highlights": "الحفاظ على درجة حرارة الجهاز"
+                "feature": "بروتوكول التشفير والاستقرار",
+                "qanati": "تشفير عسكري 256-bit",
+                "others": "تشفير بسيط أو معدوم",
+                "highlights": "حماية كاملة لخصوصية الموزع والعميل"
             }
         },
         "cards": {

@@ -44,65 +44,34 @@ const WhyUs = () => {
                     <p className="why-us-subtitle">{t('whyUs.subtitle')}</p>
                 </div>
 
-                {/* Desktop Table View */}
-                <div className="comparison-table-wrapper desktop-only">
-                    <table className="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>{t('whyUs.table.feature')}</th>
-                                <th className="qanati-column">{t('whyUs.table.qanati')}</th>
-                                <th>{t('whyUs.table.others')}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {comparisons.map((item, index) => (
-                                <tr key={index} className="comparison-row">
-                                    <td className="feature-name">
-                                        <div className="feature-dot"></div>
-                                        {item.feature}
-                                    </td>
-                                    <td className="qanati-value highlight">
-                                        <div className="check-icon">{'\u2713'}</div>
-                                        <span
-                                            className="value-text"
-                                            dangerouslySetInnerHTML={{ __html: item.qanati }}
-                                        />
-                                        <div
-                                            className="feature-highlight"
-                                            dangerouslySetInnerHTML={{ __html: item.highlights }}
-                                        />
-                                    </td>
-                                    <td className="others-value">
-                                        <div className="cross-icon">{'\u2715'}</div>
-                                        {item.others}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-
-                {/* Mobile Cards View */}
-                <div className="why-us-mobile-cards mobile-only">
+                {/* Aggressive Performance Dashboard */}
+                <div className="performance-dashboard">
                     {comparisons.map((item, index) => (
-                        <div key={index} className="comparison-mobile-card">
-                            <div className="mobile-card-header">{item.feature}</div>
-                            <div className="mobile-card-content">
-                                <div className="mobile-qanati-side">
-                                    <span className="side-label">{t('whyUs.labels.qanati')}</span>
-                                    <p
-                                        className="side-value"
-                                        dangerouslySetInnerHTML={{ __html: item.qanati }}
-                                    />
-                                    <span
-                                        className="side-highlight"
-                                        dangerouslySetInnerHTML={{ __html: item.highlights }}
-                                    />
+                        <div key={index} className="performance-item">
+                            <div className="performance-info">
+                                <h3 className="performance-label">{item.feature}</h3>
+                                <p className="performance-highlight" dangerouslySetInnerHTML={{ __html: item.highlights }} />
+                            </div>
+
+                            <div className="meter-container">
+                                {/* Qanati Bar */}
+                                <div className="meter-row qanati-row">
+                                    <div className="meter-label">{t('whyUs.labels.qanati')}</div>
+                                    <div className="meter-bar-wrapper">
+                                        <div className="meter-bar qanati-bar" style={{ width: '95%' }}>
+                                            <span className="meter-value" dangerouslySetInnerHTML={{ __html: item.qanati }} />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="vs-divider">{t('whyUs.table.vs')}</div>
-                                <div className="mobile-others-side">
-                                    <span className="side-label">{t('whyUs.labels.others')}</span>
-                                    <p className="side-value">{item.others}</p>
+
+                                {/* Others Bar */}
+                                <div className="meter-row others-row">
+                                    <div className="meter-label">{t('whyUs.labels.others')}</div>
+                                    <div className="meter-bar-wrapper">
+                                        <div className="meter-bar others-bar" style={{ width: '35%' }}>
+                                            <span className="meter-value">{item.others}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

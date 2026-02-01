@@ -5,19 +5,19 @@ const Features = () => {
     const { t } = useTranslation();
 
     const features = [
-        { id: 'mediakit', category: 'engine', icon: '/icons/icon_mediakit_engine.webp', color: 'cyan' },
+        { id: 'mediakit', category: 'engine', icon: '/images/3d/smart_tv_3d.png', color: 'cyan' },
         { id: 'performance', category: 'engine', icon: '/icons/icon_hardware_intelligence.webp', color: 'purple' },
         { id: 'ai', category: 'engine', icon: '/icons/icon_ai_recommendations.webp', color: 'magenta' },
         { id: 'predictive', category: 'engine', icon: '/icons/icon_hardware_intelligence.webp', color: 'gold' }, // Using same icon for now
         { id: 'stats', category: 'engine', icon: '/icons/icon_server_stats.webp', color: 'cyan' },
 
-        { id: 'glassmorphism', category: 'visual', icon: '/icons/icon_glassmorphism_ui.webp', color: 'cyan' },
+        { id: 'glassmorphism', category: 'visual', icon: '/images/3d/iphone_3d.png', color: 'cyan' },
         { id: 'multiview', category: 'visual', icon: '/icons/icon_multiview.webp', color: 'magenta' },
         { id: 'pip', category: 'visual', icon: '/icons/icon_picture_in_picture.webp', color: 'gold' },
         { id: 'audio', category: 'visual', icon: '/icons/icon_audio_interactions.webp', color: 'purple' },
 
         { id: 'commandCenter', category: 'control', icon: '/icons/icon_command_center.webp', color: 'gold' },
-        { id: 'parentalControl', category: 'control', icon: '/icons/icon_parental_control.webp', color: 'purple' },
+        { id: 'parentalControl', category: 'control', icon: '/images/3d/shield_3d.png', color: 'purple' },
         { id: 'recording', category: 'control', icon: '/icons/icon_recording_download.webp', color: 'magenta' },
         { id: 'voice', category: 'control', icon: '/icons/icon_voice_search.webp', color: 'cyan' },
         { id: 'trailers', category: 'control', icon: '/icons/icon_smart_trailers.webp', color: 'magenta' }
