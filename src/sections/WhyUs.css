@@ -1,6 +1,10 @@
+/* ═══════════════════════════════════════════════════════════
+   Why Us - Semantic Artistic Masterpiece
+   ═══════════════════════════════════════════════════════════ */
+
 .why-us {
     padding: 10rem 0;
-    background: var(--color-background);
+    background: var(--color-obsidian);
     position: relative;
     overflow: hidden;
 }
@@ -13,44 +17,54 @@
 
 .section-tag {
     display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background: rgba(0, 229, 255, 0.1);
-    color: var(--color-cyan);
+    padding: 0.6rem 1.75rem;
+    background: rgba(0, 180, 216, 0.1);
+    color: var(--color-ice-cyan);
     border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 180, 216, 0.2);
 }
 
 .why-us-header {
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
+    /* Reduced from 8rem */
 }
 
 .why-us-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
+    color: var(--color-platinum);
 }
 
 .why-us-subtitle {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+    color: var(--color-ghost-blue);
     max-width: 800px;
     margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
-/* Comparison Table (Desktop) */
+/* ═══════════════════════════════════════════════════════════
+   Comparison Table - Metallic Chrome Style
+   ═══════════════════════════════════════════════════════════ */
+
 .comparison-table-wrapper {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(13, 27, 42, 0.4);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(144, 224, 239, 0.15);
     border-radius: 40px;
     padding: 3rem;
+    /* Reduced from 4rem */
     margin-bottom: 6rem;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    /* Reduced from 8rem */
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
 }
 
 .comparison-table {
@@ -60,164 +74,151 @@
 }
 
 .comparison-table th {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: right;
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-silver-mist);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .comparison-table th.qanati-column {
-    color: var(--color-gold);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: var(--color-antique-gold);
+    font-weight: 900;
 }
 
 .comparison-row {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.comparison-row:hover {
-    transform: scale(1.02);
-    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comparison-table td {
-    padding: 2.5rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    /* Reduced from 3rem */
+    border-bottom: 1px solid rgba(144, 224, 239, 0.05);
 }
 
 .feature-name {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     font-weight: 700;
-    color: var(--color-cyan);
-    font-size: 1.25rem;
+    color: var(--color-ice-cyan);
+    font-size: 1.4rem;
 }
 
 .feature-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--color-cyan);
+    width: 6px;
+    height: 6px;
+    background: var(--color-ice-cyan);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--color-cyan);
+    box-shadow: 0 0 15px var(--color-ice-cyan);
 }
 
 .qanati-value.highlight {
-    background: rgba(255, 215, 0, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.1);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+    background: rgba(255, 214, 10, 0.05);
+    border: 1px solid rgba(255, 214, 10, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    /* Reduced from 2.5rem */
 }
 
 .check-icon {
-    width: 24px;
-    height: 24px;
-    background: var(--color-gold);
-    color: #000;
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-industrial-gold);
+    color: var(--color-obsidian);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 15px var(--color-gold);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0 20px rgba(255, 214, 10, 0.4);
 }
 
 .value-text {
     font-weight: 800;
-    color: #fff;
-    font-size: 1.125rem;
+    color: var(--color-platinum);
+    font-size: 1.2rem;
 }
 
 .feature-highlight {
-    font-size: 0.9rem;
-    color: var(--color-gold);
-    opacity: 0.8;
-    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-antique-gold);
+    font-weight: 600;
+    margin-top: 0.75rem;
 }
 
 .others-value {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(169, 214, 229, 0.3);
     font-style: italic;
+    font-weight: 500;
 }
 
 .cross-icon {
-    color: #ff3e3e;
+    color: var(--color-electric-magenta);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
-/* Why Us Cards */
+/* ═══════════════════════════════════════════════════════════
+   Why Us Cards - Semantic Artistic Grid
+   ═══════════════════════════════════════════════════════════ */
+
 .why-us-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .why-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--glass-border);
+    background: rgba(13, 27, 42, 0.5);
+    border: 1px solid rgba(144, 224, 239, 0.1);
     border-radius: 32px;
-    padding: 3rem;
+    padding: 3rem 2.5rem;
+    /* Reduced from 4rem 3rem */
     text-align: center;
-    transition: all 0.4s ease;
-}
-
-.why-card:hover {
-    transform: translateY(-15px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.card-cyan:hover {
-    border-color: var(--color-cyan);
-    box-shadow: 0 20px 50px rgba(0, 229, 255, 0.1);
-}
-
-.card-magenta:hover {
-    border-color: var(--color-magenta);
-    box-shadow: 0 20px 50px rgba(233, 30, 99, 0.1);
-}
-
-.card-gold:hover {
-    border-color: var(--color-gold);
-    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .why-card-icon {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .why-card h4 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
 }
 
 .why-card p {
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 1.8;
+    color: var(--color-ghost-blue);
+    line-height: 1.7;
+    font-weight: 500;
 }
 
-/* Mobile Visibility Logic */
-.mobile-only {
-    display: none;
+.card-cyan h4 {
+    color: var(--color-ice-cyan);
 }
+
+.card-magenta h4 {
+    color: var(--color-electric-magenta);
+}
+
+.card-gold h4 {
+    color: var(--color-antique-gold);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Mobile Artistic Logic
+   ═══════════════════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-    .desktop-only {
-        display: none;
-    }
-
-    .mobile-only {
-        display: block;
-    }
-
-    .why-us-title {
-        font-size: 2.5rem;
+    .comparison-table-wrapper {
+        padding: 2rem;
+        border-radius: 24px;
     }
 
     .why-us-mobile-cards {
@@ -225,84 +226,64 @@
         flex-direction: column;
         gap: 1.5rem;
         margin-bottom: 4rem;
+        /* Spacing before features cards */
     }
 
     .comparison-mobile-card {
-        background: var(--glass-bg);
-        border: 1px solid var(--glass-border);
+        background: rgba(13, 27, 42, 0.6);
+        border: 1px solid rgba(144, 224, 239, 0.15);
         border-radius: 24px;
         overflow: hidden;
     }
 
     .mobile-card-header {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 1rem 1.5rem;
-        font-weight: 700;
-        color: var(--color-cyan);
-        border-bottom: 1px solid var(--glass-border);
+        background: rgba(0, 180, 216, 0.1);
+        padding: 1.25rem 1.5rem;
+        font-weight: 800;
+        color: var(--color-ice-cyan);
     }
 
     .mobile-card-content {
-        padding: 1.5rem;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
     .mobile-qanati-side {
-        background: rgba(255, 215, 0, 0.05);
-        padding: 1rem;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 215, 0, 0.1);
+        background: rgba(255, 214, 10, 0.05);
+        padding: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 214, 10, 0.1);
     }
 
     .side-label {
         font-size: 0.75rem;
+        color: var(--color-antique-gold);
         text-transform: uppercase;
-        color: var(--color-gold);
-        display: block;
         margin-bottom: 0.5rem;
+        display: block;
+        font-weight: 800;
     }
 
     .side-value {
         font-weight: 800;
-        color: #fff;
+        color: var(--color-platinum);
+        font-size: 1.1rem;
     }
 
     .side-highlight {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: var(--color-gold);
-        opacity: 0.7;
+        opacity: 0.8;
+        display: block;
+        margin-top: 0.5rem;
     }
 
     .vs-divider {
         text-align: center;
         font-weight: 900;
-        color: rgba(255, 255, 255, 0.2);
+        color: rgba(169, 214, 229, 0.2);
         font-size: 0.8rem;
-        position: relative;
-    }
-
-    .vs-divider::before,
-    .vs-divider::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 40%;
-        height: 1px;
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .vs-divider::before {
-        left: 0;
-    }
-
-    .vs-divider::after {
-        right: 0;
-    }
-
-    .mobile-others-side {
-        padding: 0 1rem;
-        opacity: 0.5;
     }
 }

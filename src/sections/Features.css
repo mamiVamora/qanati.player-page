@@ -1,11 +1,12 @@
 /* ═══════════════════════════════════════════════════════════
-   Features Section - Mobile First, Always Visible Colors
+   Features Section - Semantic Artistic Masterpiece
    ═══════════════════════════════════════════════════════════ */
 
 .features {
-    padding: 8rem 0;
+    padding: 10rem 0;
     position: relative;
     overflow: hidden;
+    background: var(--color-obsidian);
 }
 
 .features-container {
@@ -15,358 +16,241 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Header
+   Header - Artistic Hierarchy
    ═══════════════════════════════════════════════════════════ */
 
 .features-header {
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
+    /* Reduced from 8rem */
 }
 
 .features-title {
-    font-size: 3rem;
-    font-weight: var(--weight-extrabold);
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: var(--color-platinum);
 }
 
 .features-subtitle {
-    font-size: 1.25rem;
-    color: var(--color-cyan);
-    opacity: 0.9;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    /* Slightly larger for emphasis */
+    color: var(--color-silver-mist);
+    font-weight: 600;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.manifesto-gold {
+    color: #ffd60a;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(255, 214, 10, 0.4);
+    display: inline-block;
+    padding: 0 0.2rem;
+}
+
+.manifesto-cyan {
+    color: #00f2ff;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+    display: inline-block;
+    padding: 0 0.2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Category - Each with unique color (Always Visible)
+   Category - Semantic Expression
    ═══════════════════════════════════════════════════════════ */
 
 .features-category {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+    /* Reduced from 8rem */
 }
 
 .category-title {
-    font-size: 2rem;
-    font-weight: var(--weight-bold);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    /* Reduced from 2.5rem */
+    font-weight: 800;
     text-align: center;
     margin-bottom: 3rem;
+    /* Reduced from 4rem */
 }
 
-/* First category - Engine (Cyan) */
-.features-category:nth-child(2) .category-title {
-    color: var(--color-cyan);
-    text-shadow: var(--glow-cyan);
+/* Category: Engine (Cobalt & Ice) */
+.features-category:nth-of-type(1) .category-title {
+    color: var(--color-ice-cyan);
+    text-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
 }
 
-/* Second category - Visual (Magenta) */
-.features-category:nth-child(3) .category-title {
-    color: var(--color-magenta);
-    text-shadow: var(--glow-magenta);
+/* Category: Visual (Electric Magenta) */
+.features-category:nth-of-type(2) .category-title {
+    color: var(--color-electric-magenta);
+    text-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
 }
 
-/* Third category - Smart (Purple) */
-.features-category:nth-child(4) .category-title {
-    color: var(--color-purple);
-    text-shadow: var(--glow-purple);
+/* Category: Control (Royal Purple) */
+.features-category:nth-of-type(3) .category-title {
+    color: var(--color-soft-violet);
+    text-shadow: 0 0 20px rgba(183, 156, 237, 0.3);
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Grid
+   Feature Card - Content-Aware Decoration
    ═══════════════════════════════════════════════════════════ */
 
 .features-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Slightly smaller min-width */
     gap: 2rem;
+    /* Reduced from 2.5rem */
 }
-
-@media (min-width: 640px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Feature Card - Colors Always Visible (Mobile First)
-   ═══════════════════════════════════════════════════════════ */
 
 .feature-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 2px solid;
+    border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 2rem;
+    /* Reduced from 24px */
+    padding: 2.5rem 1.5rem;
+    /* Reduced from 3rem 2rem */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fadeIn 0.6s ease-out backwards;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
 
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 20px;
-    opacity: 0.15;
-    z-index: -1;
+.feature-card:active {
+    transform: scale(0.96);
+    background: rgba(13, 27, 42, 0.8);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   Icon - Always Glowing
-   ═══════════════════════════════════════════════════════════ */
-
+/* Semantic Icon Styling */
 .feature-icon {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    /* Reduced from 80px */
+    height: 65px;
     margin-bottom: 1.5rem;
+    /* Reduced from 2rem */
     position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
 }
 
 .feature-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: all 0.3s ease;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Content
+   Semantic Color Blocks (No Default Gray)
    ═══════════════════════════════════════════════════════════ */
 
-.feature-content {
-    position: relative;
-    z-index: 1;
-}
-
-.feature-title {
-    font-size: 1.5rem;
-    font-weight: var(--weight-bold);
-    margin-bottom: 0.75rem;
-}
-
-.feature-description {
-    font-size: 1rem;
-    line-height: var(--leading-relaxed);
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Color Variants - Always Visible, No Hover Required
-   ═══════════════════════════════════════════════════════════ */
-
-/* Cyan Cards */
+/* Engine/Cyan cards */
 .feature-color-cyan {
-    border-color: var(--color-cyan);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 229, 255, 0.3);
-}
-
-.feature-color-cyan::before {
-    background: radial-gradient(circle at center,
-            rgba(0, 229, 255, 0.15),
-            transparent 70%);
+    border-color: rgba(0, 180, 216, 0.3);
 }
 
 .feature-color-cyan .feature-title {
-    color: var(--color-cyan);
-    text-shadow: var(--glow-cyan);
+    color: var(--color-ice-cyan);
 }
 
 .feature-color-cyan .feature-description {
-    color: rgba(0, 229, 255, 0.8);
+    color: var(--color-ghost-blue);
 }
 
 .feature-color-cyan .feature-icon img {
-    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.6));
+    filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.5));
 }
 
-/* Magenta Cards */
+/* Visual/Magenta cards */
 .feature-color-magenta {
-    border-color: var(--color-magenta);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(233, 30, 99, 0.3);
-}
-
-.feature-color-magenta::before {
-    background: radial-gradient(circle at center,
-            rgba(233, 30, 99, 0.15),
-            transparent 70%);
+    border-color: rgba(255, 0, 110, 0.3);
 }
 
 .feature-color-magenta .feature-title {
-    color: var(--color-magenta);
-    text-shadow: var(--glow-magenta);
+    color: var(--color-electric-magenta);
 }
 
 .feature-color-magenta .feature-description {
-    color: rgba(233, 30, 99, 0.8);
+    color: rgba(255, 0, 110, 0.7);
 }
 
 .feature-color-magenta .feature-icon img {
-    filter: drop-shadow(0 0 20px rgba(233, 30, 99, 0.6));
+    filter: drop-shadow(0 0 15px rgba(255, 0, 110, 0.5));
 }
 
-/* Purple Cards */
+/* Control/Purple cards */
 .feature-color-purple {
-    border-color: var(--color-purple);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(156, 39, 176, 0.3);
-}
-
-.feature-color-purple::before {
-    background: radial-gradient(circle at center,
-            rgba(156, 39, 176, 0.15),
-            transparent 70%);
+    border-color: rgba(114, 9, 183, 0.3);
 }
 
 .feature-color-purple .feature-title {
-    color: var(--color-purple);
-    text-shadow: var(--glow-purple);
+    color: var(--color-soft-violet);
 }
 
 .feature-color-purple .feature-description {
-    color: rgba(156, 39, 176, 0.8);
+    color: rgba(183, 156, 237, 0.7);
 }
 
 .feature-color-purple .feature-icon img {
-    filter: drop-shadow(0 0 20px rgba(156, 39, 176, 0.6));
+    filter: drop-shadow(0 0 15px rgba(114, 9, 183, 0.5));
 }
 
-/* Gold Cards */
+/* Luxury/Gold cards */
 .feature-color-gold {
-    border-color: var(--color-gold);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(255, 215, 0, 0.3);
-}
-
-.feature-color-gold::before {
-    background: radial-gradient(circle at center,
-            rgba(255, 215, 0, 0.15),
-            transparent 70%);
+    border-color: rgba(255, 214, 10, 0.3);
 }
 
 .feature-color-gold .feature-title {
-    color: var(--color-gold);
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    color: var(--color-antique-gold);
 }
 
 .feature-color-gold .feature-description {
-    color: rgba(255, 215, 0, 0.8);
+    color: rgba(255, 214, 10, 0.7);
 }
 
 .feature-color-gold .feature-icon img {
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+    filter: drop-shadow(0 0 15px rgba(255, 214, 10, 0.5));
 }
 
-/* Cyan-Gold Gradient Cards */
-.feature-color-cyan-gold {
-    border-color: var(--color-cyan);
-    box-shadow: var(--shadow-lg),
-        0 0 15px rgba(0, 229, 255, 0.3),
-        0 0 25px rgba(255, 215, 0, 0.2);
+.feature-title {
+    font-size: 1.35rem;
+    /* Reduced from 1.5rem */
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    /* Reduced from 1rem */
 }
 
-.feature-color-cyan-gold::before {
-    background: radial-gradient(circle at center,
-            rgba(0, 229, 255, 0.1),
-            rgba(255, 215, 0, 0.1),
-            transparent 70%);
-}
-
-.feature-color-cyan-gold .feature-title {
-    background: linear-gradient(135deg, var(--color-cyan), var(--color-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.feature-color-cyan-gold .feature-description {
-    color: rgba(0, 229, 255, 0.8);
-}
-
-.feature-color-cyan-gold .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
-}
-
-/* Purple-Gold Gradient Cards */
-.feature-color-purple-gold {
-    border-color: var(--color-purple);
-    box-shadow: var(--shadow-lg),
-        0 0 15px rgba(156, 39, 176, 0.3),
-        0 0 25px rgba(255, 215, 0, 0.2);
-}
-
-.feature-color-purple-gold::before {
-    background: radial-gradient(circle at center,
-            rgba(156, 39, 176, 0.1),
-            rgba(255, 215, 0, 0.1),
-            transparent 70%);
-}
-
-.feature-color-purple-gold .feature-title {
-    background: linear-gradient(135deg, var(--color-purple), var(--color-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.feature-color-purple-gold .feature-description {
-    color: rgba(156, 39, 176, 0.8);
-}
-
-.feature-color-purple-gold .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(156, 39, 176, 0.5)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+.feature-description {
+    font-size: 0.95rem;
+    /* Reduced from 1rem */
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Responsive
+   Artistic Responsive
    ═══════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
     .features {
-        padding: 5rem 0;
-    }
-
-    .features-container {
-        padding: 0 1rem;
+        padding: 6rem 0;
     }
 
     .features-header {
         margin-bottom: 4rem;
     }
 
-    .features-title {
-        font-size: 2.5rem;
+    .features-grid {
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
     }
 
-    .features-subtitle {
-        font-size: 1.125rem;
-    }
-
-    .category-title {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .feature-icon {
-        width: 80px;
-        height: 80px;
-    }
-
-    .feature-title {
-        font-size: 1.25rem;
-    }
-
-    .feature-description {
-        font-size: 0.9375rem;
+    .feature-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
     }
 }

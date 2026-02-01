@@ -1,12 +1,10 @@
 /* ═══════════════════════════════════════════════════════════
-   Footer - Glassmorphism Luxury with Colorful Links
+   Footer - Semantic Artistic Masterpiece
    ═══════════════════════════════════════════════════════════ */
 
 .footer {
-    padding: 4rem 0 2rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    padding: 6rem 0 3rem;
+    background: var(--color-obsidian);
     border-top: 1px solid var(--glass-border);
     position: relative;
     overflow: hidden;
@@ -19,12 +17,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 0%,
-            rgba(0, 229, 255, 0.05),
-            transparent 50%),
-        radial-gradient(circle at 70% 100%,
-            rgba(233, 30, 99, 0.05),
-            transparent 50%);
+    background:
+        radial-gradient(circle at 10% 0%, rgba(0, 119, 182, 0.05), transparent 50%),
+        radial-gradient(circle at 90% 100%, rgba(114, 9, 183, 0.05), transparent 50%);
     z-index: -1;
 }
 
@@ -35,57 +30,34 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Grid
+   Artistic Grid & Titles
    ═══════════════════════════════════════════════════════════ */
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
 }
-
-@media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Column
-   ═══════════════════════════════════════════════════════════ */
 
 .footer-column {
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .footer-column {
-        text-align: right;
-    }
+    text-align: right;
 }
 
 .footer-title {
-    font-size: 1.25rem;
-    font-weight: var(--weight-bold);
-    margin-bottom: 1.5rem;
-    background: linear-gradient(90deg, var(--color-cyan), var(--color-magenta));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--color-platinum);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .footer-brand {
-    font-size: 1.5rem;
-    font-weight: var(--weight-bold);
-    margin-bottom: 0.5rem;
-    background: var(--gradient-primary);
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 0.75rem;
+    background: var(--gradient-arctic);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -93,12 +65,13 @@
 
 .footer-tagline {
     font-size: 1rem;
-    color: rgba(0, 229, 255, 0.8);
-    line-height: var(--leading-relaxed);
+    color: var(--color-ghost-blue);
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Links - Colorful & Artistic
+   Links - Intentional Semantic Flow
    ═══════════════════════════════════════════════════════════ */
 
 .footer-links {
@@ -108,121 +81,93 @@
 }
 
 .footer-links li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .footer-links a {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--glass-bg);
-    border: 2px solid;
-    border-radius: 12px;
+    padding: 0.6rem 1.25rem;
+    background: rgba(13, 27, 42, 0.4);
+    border: 1px solid rgba(144, 224, 239, 0.1);
+    border-radius: 14px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: var(--weight-semibold);
+    transition: all 0.4s ease;
+    font-weight: 600;
+    font-size: 0.9375rem;
 }
 
-/* Cyan Links */
+/* Link Variant Colors (No Default Gray) */
 .link-cyan {
-    color: var(--color-cyan);
-    border-color: rgba(0, 229, 255, 0.3);
+    color: var(--color-ice-cyan);
+    border-color: rgba(0, 180, 216, 0.2);
 }
 
-.link-cyan:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--color-cyan);
-    box-shadow: var(--glow-cyan);
-    transform: translateX(-4px) scale(1.05);
+.link-cyan:active {
+    background: rgba(0, 180, 216, 0.1);
+    transform: scale(0.96);
 }
 
-/* Magenta Links */
 .link-magenta {
-    color: var(--color-magenta);
-    border-color: rgba(233, 30, 99, 0.3);
+    color: var(--color-electric-magenta);
+    border-color: rgba(255, 0, 110, 0.2);
 }
 
-.link-magenta:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--color-magenta);
-    box-shadow: var(--glow-magenta);
-    transform: translateX(-4px) scale(1.05);
+.link-magenta:active {
+    background: rgba(255, 0, 110, 0.1);
+    transform: scale(0.96);
 }
 
-/* Purple Links */
 .link-purple {
-    color: var(--color-purple);
-    border-color: rgba(156, 39, 176, 0.3);
+    color: var(--color-soft-violet);
+    border-color: rgba(183, 156, 237, 0.2);
 }
 
-.link-purple:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--color-purple);
-    box-shadow: var(--glow-purple);
-    transform: translateX(-4px) scale(1.05);
+.link-purple:active {
+    background: rgba(183, 156, 237, 0.1);
+    transform: scale(0.96);
 }
 
-/* Gold Links */
 .link-gold {
-    color: var(--color-gold);
-    border-color: rgba(255, 215, 0, 0.3);
+    color: var(--color-antique-gold);
+    border-color: rgba(255, 214, 10, 0.2);
 }
 
-.link-gold:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--color-gold);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    transform: translateX(-4px) scale(1.05);
+.link-gold:active {
+    background: rgba(255, 214, 10, 0.1);
+    transform: scale(0.96);
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Contact Section
+   Contact & Socials
    ═══════════════════════════════════════════════════════════ */
 
 .contact-label {
-    font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.75rem;
-    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--color-ghost-blue);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .footer-email {
     display: block;
-    background: var(--glass-bg);
-    border: 2px solid var(--color-cyan);
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
+    background: rgba(0, 119, 182, 0.05);
+    border: 1px solid var(--color-cobalt);
+    border-radius: 12px;
+    padding: 1rem;
     font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    color: var(--color-cyan);
+    color: var(--color-ice-cyan);
     text-align: center;
     direction: ltr;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 700;
 }
-
-.footer-email:hover {
-    background: var(--glass-bg-hover);
-    border-color: var(--color-cyan);
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Social Links Grid
-   ═══════════════════════════════════════════════════════════ */
 
 .social-links-grid {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    justify-content: center;
-}
-
-@media (min-width: 768px) {
-    .social-links-grid {
-        justify-content: flex-start;
-    }
+    justify-content: flex-end;
 }
 
 .social-btn {
@@ -231,198 +176,138 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    font-size: 1.25rem;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
-.social-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.social-btn:active {
+    transform: scale(0.9);
 }
 
-.social-btn:hover::before {
-    opacity: 0.1;
-}
-
-.social-btn:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.whatsapp-btn:hover {
-    background: #25D366;
-    border-color: #25D366;
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+.social-btn svg {
+    width: 22px;
+    height: 22px;
     color: #fff;
 }
 
-.telegram-btn:hover {
-    background: #0088cc;
-    border-color: #0088cc;
-    box-shadow: 0 0 20px rgba(0, 136, 204, 0.5);
-    color: #fff;
+.whatsapp-btn {
+    background: #25D366 !important;
+    border: none;
 }
 
-.facebook-btn:hover {
-    background: #1877F2;
-    border-color: #1877F2;
-    box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
-    color: #fff;
+.telegram-btn {
+    background: #0088cc !important;
+    border: none;
 }
 
-.twitter-btn:hover {
-    background: #000000;
-    border-color: #ffffff;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    color: #fff;
+.facebook-btn {
+    background: #1877F2 !important;
+    border: none;
 }
 
-.youtube-btn:hover {
-    background: #FF0000;
-    border-color: #FF0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-    color: #fff;
+.twitter-btn {
+    background: #000000 !important;
+    border: 1px solid #333;
 }
 
-/* Old WhatsApp Link Removed - Replaced by Social Grid */
-
-@media (min-width: 768px) {
-
-    .footer-email,
-    .footer-whatsapp {
-        text-align: right;
-    }
+.youtube-btn {
+    background: #FF0000 !important;
+    border: none;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Warning Section
+   Legal Warning & Seals
    ═══════════════════════════════════════════════════════════ */
 
 .footer-warning {
-    background: rgba(255, 152, 0, 0.1);
-    border: 1px solid rgba(255, 152, 0, 0.3);
-    border-radius: 16px;
+    background: rgba(255, 195, 0, 0.05);
+    border: 1px solid rgba(255, 195, 0, 0.2);
+    border-radius: 20px;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     text-align: center;
-}
-
-.warning-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 .warning-text {
-    font-size: 0.9375rem;
-    line-height: var(--leading-relaxed);
-    color: rgba(255, 152, 0, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-bronze-sun);
+    font-weight: 500;
+}
+
+.footer-seals {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.seal-item {
+    background: rgba(13, 27, 42, 0.6);
+    border: 1px solid rgba(144, 224, 239, 0.1);
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-silver-mist);
+    text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Bottom / Copyright - Luxury Edition
+   Copyright - The Final Signature
    ═══════════════════════════════════════════════════════════ */
 
 .footer-bottom {
+    padding-top: 3rem;
+    border-top: 1px solid rgba(144, 224, 239, 0.1);
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--glass-border);
-}
-
-.copyright-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 .crafted-text {
     font-size: 1rem;
-    font-weight: var(--weight-semibold);
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-ghost-blue);
+    font-weight: 600;
 }
 
 .company-highlight {
-    background: linear-gradient(90deg,
-            var(--color-cyan),
-            var(--color-magenta),
-            var(--color-purple),
-            var(--color-gold));
-    background-size: 200% 200%;
+    background: var(--gradient-industrial-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: var(--weight-extrabold);
-    font-size: 1.125rem;
-    animation: gradient-shift 6s ease infinite;
-}
-
-@keyframes gradient-shift {
-
-    0%,
-    100% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
+    font-weight: 900;
 }
 
 .copyright-text {
-    font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    color: rgba(169, 214, 229, 0.5);
+    /* Silver Mist Transparent */
+    margin-top: 0.5rem;
     font-style: italic;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Responsive
+   Mobile Refinements
    ═══════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 3rem 0 1.5rem;
-    }
-
-    .footer-container {
-        padding: 0 1rem;
+    .footer-column {
+        text-align: center;
     }
 
     .footer-grid {
-        gap: 2rem;
-        margin-bottom: 2rem;
+        gap: 3rem;
     }
 
-    .footer-title {
-        font-size: 1.125rem;
+    .social-links-grid,
+    .footer-seals {
+        justify-content: center;
     }
 
-    .footer-brand {
-        font-size: 1.25rem;
-    }
-
-    .footer-warning {
-        padding: 1.5rem;
-    }
-
-    .warning-text {
-        font-size: 0.875rem;
-    }
-
-    .footer-whatsapp {
-        flex-direction: column;
-        gap: 0.5rem;
+    .footer-links a {
+        width: 80%;
     }
 }

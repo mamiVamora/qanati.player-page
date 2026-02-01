@@ -7,6 +7,34 @@
 @import './typography.css';
 
 /* ═══════════════════════════════════════════════════════════
+   Visual Echo (Linguistic Highlights) - Mastering the Artistic Tone
+   ═══════════════════════════════════════════════════════════ */
+
+.echo-cyan {
+    color: #00f2ff;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.echo-gold {
+    color: #ffd60a;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(255, 214, 10, 0.4);
+}
+
+.echo-magenta {
+    color: #ff007b;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(255, 0, 123, 0.4);
+}
+
+.echo-purple {
+    color: var(--color-soft-violet);
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(183, 156, 237, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════
    إعادة تعيين الأنماط الافتراضية
    ═══════════════════════════════════════════════════════════ */
 

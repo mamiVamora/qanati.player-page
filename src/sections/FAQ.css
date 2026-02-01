@@ -1,0 +1,118 @@
+.faq {
+    padding: 8rem 0;
+    background: var(--color-obsidian);
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.faq-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: var(--color-platinum);
+    margin-bottom: 1rem;
+}
+
+.faq-subtitle {
+    color: var(--color-ghost-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.faq-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: right;
+    transition: all 0.4s ease;
+}
+
+/* Semantic Card Styles */
+.faq-card-engine {
+    border-color: rgba(0, 180, 216, 0.3);
+}
+
+.faq-card-engine .faq-question {
+    color: var(--color-ice-cyan);
+}
+
+.faq-card-brand {
+    border-color: rgba(255, 214, 10, 0.3);
+}
+
+.faq-card-brand .faq-question {
+    color: var(--color-antique-gold);
+}
+
+.faq-card-brand .faq-question::before {
+    background: var(--gradient-arctic);
+}
+
+.faq-card-security {
+    border-color: rgba(183, 156, 237, 0.3);
+}
+
+.faq-card-security .faq-question {
+    color: var(--color-soft-violet);
+}
+
+.faq-card-security .faq-question::before {
+    background: var(--gradient-industrial-gold);
+}
+
+/* NO HOVER EFFECTS - AS REQUESTED */
+.faq-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--glass-border);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.faq-question::before {
+    content: "";
+    width: 4px;
+    height: 18px;
+    background: var(--gradient-industrial-gold);
+    border-radius: 2px;
+}
+
+.faq-answer {
+    color: var(--color-platinum);
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 4rem 0;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

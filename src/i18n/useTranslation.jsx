@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import arTranslations from './ar.json';
 import enTranslations from './en.json';
 
@@ -7,19 +7,10 @@ const translations = {
   en: enTranslations
 };
 
-export const useTranslation = () => {
+const TranslationContext = createContext();
+
+export const TranslationProvider = ({ children }) => {
   const [language, setLanguage] = useState('ar');
-
-  const t = (key) => {
-    const keys = key.split('.');
-    let value = translations[language];
-
-    for (const k of keys) {
-      value = value?.[k];
-    }
-
-    return value || key;
-  };
 
   const applyLanguage = (lang) => {
     setLanguage(lang);
@@ -47,6 +38,17 @@ export const useTranslation = () => {
     applyLanguage(initial);
   }, []);
 
+  const t = (key) => {
+    const keys = key.split('.');
+    let value = translations[language];
+
+    for (const k of keys) {
+      value = value?.[k];
+    }
+
+    return value || key;
+  };
+
   // Update document title and metadata
   useEffect(() => {
     document.title = t('meta.title');
@@ -54,5 +56,17 @@ export const useTranslation = () => {
     if (metaDesc) metaDesc.setAttribute('content', t('meta.description'));
   }, [language]);
 
-  return { t, language, changeLanguage };
+  return (
+    <TranslationContext.Provider value={{ t, language, changeLanguage }}>
+      {children}
+    </TranslationContext.Provider>
+  );
+};
+
+export const useTranslation = () => {
+  const context = useContext(TranslationContext);
+  if (!context) {
+    throw new Error('useTranslation must be used within a TranslationProvider');
+  }
+  return context;
 };

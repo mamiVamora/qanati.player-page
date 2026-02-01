@@ -1,87 +1,263 @@
 .trust {
-    padding: 5rem 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
-    border-top: 1px solid var(--glass-border);
-    border-bottom: 1px solid var(--glass-border);
-    backdrop-filter: blur(20px);
+    padding: 10rem 0;
+    background: var(--color-obsidian);
     position: relative;
-    z-index: 10;
+    overflow: hidden;
+}
+
+.trust-bg-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.trust-glow-1 {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
+    filter: blur(80px);
+}
+
+.trust-glow-2 {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(183, 156, 237, 0.05) 0%, transparent 70%);
+    filter: blur(80px);
 }
 
 .trust-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.trust-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.trust-main-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.trust-main-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-ghost-blue);
+    font-weight: 600;
 }
 
 .trust-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
 }
 
 .trust-item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
+    padding: 2.5rem;
+    background: rgba(13, 27, 42, 0.3);
+    border-radius: 32px;
+    border: 1px solid rgba(224, 225, 221, 0.05);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .trust-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    background: rgba(13, 27, 42, 0.5);
+}
+
+/* Item Colors */
+.trust-item-cyan:hover {
+    border-color: var(--color-ice-cyan);
+}
+
+.trust-item-gold:hover {
+    border-color: var(--color-antique-gold);
+}
+
+.trust-item-purple:hover {
+    border-color: var(--color-neon-purple);
+}
+
+.trust-item-magenta:hover {
+    border-color: var(--color-deep-pink);
 }
 
 .trust-icon-wrapper {
     width: 64px;
     height: 64px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
+    background: rgba(224, 225, 221, 0.03);
+    border: 1px solid rgba(224, 225, 221, 0.1);
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    flex-shrink: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: var(--color-platinum);
+    padding: 15px;
+    position: relative;
+}
+
+.trust-item-cyan .trust-icon-wrapper {
+    color: var(--color-ice-cyan);
+}
+
+.trust-item-gold .trust-icon-wrapper {
+    color: var(--color-antique-gold);
+}
+
+.trust-item-purple .trust-icon-wrapper {
+    color: var(--color-neon-purple);
+}
+
+.trust-item-magenta .trust-icon-wrapper {
+    color: var(--color-deep-pink);
 }
 
 .stat-value {
     font-size: 2.25rem;
     font-weight: 900;
-    color: #fff;
+    color: var(--color-platinum);
     margin-bottom: 0.25rem;
-    line-height: 1;
+    direction: ltr;
+    display: block;
 }
 
 .stat-label {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-cyan);
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-ghost-blue);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
 }
 
 .stat-desc {
+    font-size: 1rem;
+    color: var(--color-ghost-blue);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Extras Section */
+.trust-extras {
+    margin-top: 8rem;
+    padding-top: 5rem;
+    border-top: 1px solid rgba(224, 225, 221, 0.05);
+}
+
+.trust-section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-platinum);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.trust-compat {
+    margin-bottom: 6rem;
+}
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.trust-badge {
+    background: rgba(224, 225, 221, 0.03);
+    border: 1px solid rgba(224, 225, 221, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    color: var(--color-ice-cyan);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.trust-badge:hover {
+    background: rgba(0, 242, 255, 0.05);
+    border-color: var(--color-ice-cyan);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.trust-testimonials {
+    margin-top: 4rem;
+}
+
+/* Testimonials */
+.trust-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+}
+
+.trust-testimonial {
+    background: rgba(224, 225, 221, 0.02);
+    border: 1px solid rgba(224, 225, 221, 0.05);
+    border-radius: 30px;
+    padding: 3rem;
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 1rem;
+    font-size: 6rem;
+    font-family: serif;
+    color: rgba(0, 242, 255, 0.05);
+    line-height: 1;
+}
+
+.testimonial-quote {
+    font-size: 1.15rem;
+    color: var(--color-platinum);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.testimonial-line {
+    width: 30px;
+    height: 2px;
+    background: var(--color-antique-gold);
+}
+
+.testimonial-role {
+    color: var(--color-antique-gold);
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.4);
-    line-height: 1.4;
+    font-weight: 800;
 }
 
 @media (max-width: 768px) {
-    .trust-grid {
-        gap: 2rem;
-    }
 
-    .trust-item {
-        padding: 1rem;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .stat-value {
-        font-size: 1.75rem;
+    .trust-grid,
+    .trust-testimonials-grid {
+        grid-template-columns: 1fr;
     }
 }

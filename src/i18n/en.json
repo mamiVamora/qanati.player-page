@@ -2,74 +2,83 @@
     "hero": {
         "title": "Qanati Player",
         "subtitle": "The Golden Standard for Premium Viewing",
-        "description": "Not just a media player, but a complete cinema in your pocket.",
+        "description": "Not just a media player, but a <span class='text-highlight-silver'>complete cinema in your pocket</span>, delivering a <span class='text-highlight-cyan'>stunning visual experience</span> powered by the revolutionary <span class='text-highlight-cyan'>MediaKit Engine</span> and premium <span class='text-highlight-gold'>Glassmorphism design</span>.",
         "cta": "Download Now",
-        "secondaryCta": "Why Us?"
+        "secondaryCta": "Why Us?",
+        "ticker": {
+            "label": "Latest updates",
+            "items": [
+                "40% faster startup time",
+                "Multi-language subtitles with smart sync",
+                "Improved stability on weak networks",
+                "Smoother UI on large screens"
+            ]
+        }
     },
     "features": {
-        "sectionTitle": "Technical & Visual Excellence",
-        "sectionSubtitle": "We do not follow standards ? we create them. Discover power in every click.",
+        "sectionTitle": "Technical \u0026 Visual Excellence",
+        "sectionSubtitle": "We do not follow standards; we create them. Discover power in every click.",
         "categories": {
-            "engine": "Engine & Intelligence",
+            "engine": "Engine \u0026 Intelligence",
             "visual": "Visual Experience",
-            "control": "Control & Command"
+            "control": "Control \u0026 Command"
         },
         "items": {
             "mediakit": {
-                "title": "Revolutionary MediaKit Engine",
-                "description": "The core of the app: ultra-smooth 4K HDR playback with near?instant zapping."
+                "title": "Revolutionary <span class='echo-cyan'>MediaKit</span> Engine",
+                "description": "Instant <span class='echo-cyan'>4K/HDR</span> playback with smooth zapping and zero stutter."
             },
             "performance": {
-                "title": "Hardware & Network Intelligence",
-                "description": "Real?time device and network analysis to stabilize streaming under tough conditions."
+                "title": "Hardware \u0026 Network Intelligence",
+                "description": "Auto buffer tuning keeps streams stable on weak networks."
             },
             "multiview": {
-                "title": "Professional Multi?View",
-                "description": "Watch up to 4 sources simultaneously with independent audio control."
+                "title": "Professional Multi-View",
+                "description": "Watch up to 4 sources with independent audio control."
             },
             "pip": {
-                "title": "Picture?in?Picture (PiP)",
-                "description": "Keep watching while using other apps with a smart, movable mini?window."
+                "title": "Picture-in-Picture (PiP)",
+                "description": "Keep watching while using other apps with a smart floating window."
             },
             "glassmorphism": {
-                "title": "Glassmorphism UI",
-                "description": "A premium, elegant interface with smooth micro?animations."
+                "title": "<span class='echo-gold'>Glassmorphism</span> UI",
+                "description": "Premium glass UI that keeps content front and center."
             },
             "ai": {
-                "title": "AI?Powered Recommendations",
-                "description": "Personalized suggestions based on your viewing patterns."
+                "title": "AI-Powered Recommendations",
+                "description": "Smarter recommendations that surface what you actually want to watch."
             },
             "voice": {
                 "title": "Cinematic Voice Search",
-                "description": "Find content instantly with advanced speech recognition."
+                "description": "Find content fast with accurate voice search."
             },
             "trailers": {
                 "title": "Smart Trailer System",
-                "description": "Watch official trailers directly from the details page."
+                "description": "Watch official trailers instantly to decide faster."
             },
             "stats": {
                 "title": "Live Server Stats",
-                "description": "Stay updated on your channels, movies, and series with real?time insights."
+                "description": "Live server insights to avoid interruptions."
             },
             "commandCenter": {
                 "title": "Command Center",
-                "description": "A full control panel for advanced settings and privacy options."
+                "description": "One place to control settings, privacy, and performance."
             },
             "parentalControl": {
                 "title": "Parental Control",
-                "description": "One?tap content restrictions for a family?safe experience."
+                "description": "One-tap restrictions for a family-safe experience."
             },
             "recording": {
-                "title": "Recording & Download Hub",
-                "description": "Save live content in source quality for offline viewing."
+                "title": "Recording \u0026 Download Hub",
+                "description": "Save live streams in source quality for offline viewing."
             },
             "audio": {
                 "title": "Premium Audio Interactions",
-                "description": "Subtle audio feedback designed to enhance immersion."
+                "description": "Subtle audio cues that make the experience feel premium."
             },
             "predictive": {
                 "title": "Predictive Performance Mode",
-                "description": "Smart caching and optimization for maximum speed and responsiveness."
+                "description": "Faster navigation with predictive caching and instant response."
             }
         }
     },
@@ -109,7 +118,7 @@
         },
         "contact": {
             "title": "Contact Us",
-            "support": "Support & Inquiries:",
+            "support": "Support \u0026 Inquiries:",
             "whatsapp": "Chat on WhatsApp",
             "telegram": "Telegram",
             "facebook": "Facebook",
@@ -119,9 +128,9 @@
         "warning": "Warning: This project is protected by international intellectual property protocols. Digital fingerprints are embedded in code and UI to trace unauthorized copies. Legal action and account takedowns are immediate on any violation.",
         "craftedWith": "Crafted with pride by",
         "companyName": "Qanati Tech",
-        "copyright": "All rights reserved © 2026",
-        "note": "Important: This app is a professional media player and does not include pre?loaded content. To activate your server, please contact us.",
-        "backToHome": "← Back to Home",
+        "copyright": "All rights reserved ? 2026",
+        "note": "Important: This app is a professional media player and does not include preloaded content. To activate your server, please contact us.",
+        "backToHome": "? Back to Home",
         "lastUpdated": "Last updated: January 2026"
     },
     "nav": {
@@ -133,7 +142,8 @@
         },
         "languageToggle": "Arabic",
         "languageToggleLabel": "Switch language",
-        "menuLabel": "Menu"
+        "menuLabel": "Menu",
+        "tagline": "We build what others rely on"
     },
     "promoVideo": {
         "label": "PRIME ENGINE ACTIVE",
@@ -147,7 +157,7 @@
                 "subtitle": "Real multi?tasking for professionals"
             },
             "intelligence": {
-                "title": "Hardware & Network Intelligence",
+                "title": "Hardware \u0026 Network Intelligence",
                 "subtitle": "Stable streaming in every condition"
             },
             "glass": {
@@ -157,23 +167,46 @@
         }
     },
     "trust": {
+        "title": "Trusted by Millions Globally",
+        "subtitle": "We don't just sell subscriptions; we design gateways for unforgettable viewing",
         "stats": {
             "servers": {
-                "label": "Compatible Servers",
-                "description": "Full support for Xtream and M3U servers"
+                "label": "Active Users",
+                "description": "A live experience for over <span class='echo-cyan'>1 Million families</span> worldwide who trust our standards."
             },
             "ratings": {
-                "label": "User Ratings",
-                "description": "Based on 1,250+ real reviews"
+                "label": "Store Rating",
+                "description": "We lead the industry with a <span class='echo-gold'>4.9/5</span> rating, the highest in its class."
             },
             "startup": {
-                "label": "Startup Time",
-                "description": "Powered by the MediaKit engine"
+                "label": "Response Speed",
+                "description": "Powered by MediaKit, streams start within just <span class='echo-purple'>0.4 seconds</span>, the fastest globally."
             },
             "updates": {
-                "label": "Regular Updates",
+                "label": "Security Updates",
                 "value": "Weekly",
-                "description": "Continuous performance and security improvements"
+                "description": "Advanced protection system and <span class='echo-magenta'>weekly</span> updates ensuring uninterrupted stability."
+            }
+        },
+        "compatible": {
+            "title": "Unified Compatibility Protocols",
+            "items": {
+                "xtream": "Official Xtream API",
+                "m3u": "Smart M3U Links",
+                "mediakit": "MediaKit PRIME Engine"
+            }
+        },
+        "testimonials": {
+            "title": "Success Partners",
+            "items": {
+                "reseller": {
+                    "quote": "Qanati Player isn't just an app; it's a leap in streaming stability. No more freezing or heating issues.",
+                    "role": "Bassem Al-Khalidi - Media Distribution Expert"
+                },
+                "analyst": {
+                    "quote": "After auditing the core engine, I can say this app is light years ahead of its competitors technically.",
+                    "role": "Eng. Ahmed Salem - Software Systems Analyst"
+                }
             }
         }
     },
@@ -199,13 +232,13 @@
                 "highlights": "Seamless playback with no stutter"
             },
             "multiview": {
-                "feature": "Multi?View",
+                "feature": "Multi-View",
                 "qanati": "4 synchronized screens in full resolution",
                 "others": "Single screen only",
                 "highlights": "Independent audio control per screen"
             },
             "performance": {
-                "feature": "Performance & Hardware",
+                "feature": "Performance \u0026 Hardware",
                 "qanati": "Live Stats",
                 "others": "No stats available",
                 "highlights": "Detect latency and RAM usage"
@@ -219,7 +252,7 @@
         },
         "cards": {
             "instantOn": {
-                "title": "Instant?On Speed",
+                "title": "Instant-On Speed",
                 "description": "Channel playback in under 0.5s thanks to smart cache optimizations."
             },
             "security": {
@@ -229,6 +262,24 @@
             "quality": {
                 "title": "8K + AV1 Support",
                 "description": "Latest compression tech for highest quality at lower bandwidth."
+            }
+        }
+    },
+    "mediakit": {
+        "title": "Why MediaKit Engine?",
+        "subtitle": "One Technical Heart.. Across All Platforms",
+        "features": {
+            "unified": {
+                "title": "Unified Technical Sovereignty",
+                "description": "While other apps rely on default system players, we have our <span class='echo-cyan'>own unified engine</span>. Experience the same pro performance on any device."
+            },
+            "cooling": {
+                "title": "Absolute Stability & Cooling",
+                "description": "No more overheating. Thanks to <span class='echo-purple'>Smart Decoding</span>, the engine runs with minimal CPU effort, saving battery and keeping your device cool."
+            },
+            "formats": {
+                "title": "The Format Monster",
+                "description": "No format is out of reach. From <span class='echo-gold'>4K HDR</span> to <span class='echo-gold'>AV1</span>, our engine devours all files with total smoothness."
             }
         }
     },
@@ -251,7 +302,7 @@
                 "h2": "2.2 Usage Info",
                 "l2": [
                     "Interaction logs",
-                    "Performance & crash analytics",
+                    "Performance \u0026 crash analytics",
                     "Network info (Speed, Quality)"
                 ]
             },
@@ -299,16 +350,42 @@
             },
             "s2": {
                 "h": "2. Digital Fingerprinting",
-                "p": "⚠️ Unique digital watermarks are embedded in the code to trace any cloned version back to its source."
+                "p": "Warning: Unique digital watermarks are embedded in the code to trace any cloned version back to its source."
             },
             "s5": {
                 "h": "5. Legal Action",
-                "p": "🚨 In case of violation, we take immediate takedown actions, prosecution, and demand high financial damages."
+                "p": "Alert: In case of violation, we take immediate takedown actions, prosecution, and demand financial damages."
             }
         }
     },
     "meta": {
         "title": "Qanati Player - The Golden Standard for Premium Viewing",
         "description": "Revolutionary media player with Glassmorphism design and superior performance."
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "Quick answers before you download",
+        "items": [
+            {
+                "q": "Does the app include content?",
+                "a": "No. It is a media player and requires your own subscription or server.",
+                "type": "engine"
+            },
+            {
+                "q": "Which devices are supported?",
+                "a": "Android, Windows, and Smart TVs are supported now; more platforms are coming.",
+                "type": "brand"
+            },
+            {
+                "q": "Do you ship updates regularly?",
+                "a": "Yes, frequent updates for performance and security.",
+                "type": "engine"
+            },
+            {
+                "q": "Is my data safe?",
+                "a": "We use local storage and advanced encryption to protect your data.",
+                "type": "security"
+            }
+        ]
     }
 }

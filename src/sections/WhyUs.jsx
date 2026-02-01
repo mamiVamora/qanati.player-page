@@ -63,8 +63,14 @@ const WhyUs = () => {
                                     </td>
                                     <td className="qanati-value highlight">
                                         <div className="check-icon">{'\u2713'}</div>
-                                        <span className="value-text">{item.qanati}</span>
-                                        <div className="feature-highlight">{item.highlights}</div>
+                                        <span
+                                            className="value-text"
+                                            dangerouslySetInnerHTML={{ __html: item.qanati }}
+                                        />
+                                        <div
+                                            className="feature-highlight"
+                                            dangerouslySetInnerHTML={{ __html: item.highlights }}
+                                        />
                                     </td>
                                     <td className="others-value">
                                         <div className="cross-icon">{'\u2715'}</div>
@@ -84,8 +90,14 @@ const WhyUs = () => {
                             <div className="mobile-card-content">
                                 <div className="mobile-qanati-side">
                                     <span className="side-label">{t('whyUs.labels.qanati')}</span>
-                                    <p className="side-value">{item.qanati}</p>
-                                    <span className="side-highlight">{item.highlights}</span>
+                                    <p
+                                        className="side-value"
+                                        dangerouslySetInnerHTML={{ __html: item.qanati }}
+                                    />
+                                    <span
+                                        className="side-highlight"
+                                        dangerouslySetInnerHTML={{ __html: item.highlights }}
+                                    />
                                 </div>
                                 <div className="vs-divider">{t('whyUs.table.vs')}</div>
                                 <div className="mobile-others-side">
@@ -100,18 +112,18 @@ const WhyUs = () => {
                 <div className="why-us-cards">
                     <div className="why-card card-cyan">
                         <div className="why-card-icon">{'\u26A1'}</div>
-                        <h4>{t('whyUs.cards.instantOn.title')}</h4>
-                        <p>{t('whyUs.cards.instantOn.description')}</p>
+                        <h4 dangerouslySetInnerHTML={{ __html: t('whyUs.cards.instantOn.title') }} />
+                        <p dangerouslySetInnerHTML={{ __html: t('whyUs.cards.instantOn.description') }} />
                     </div>
                     <div className="why-card card-magenta">
                         <div className="why-card-icon">{'\u{1F6E1}\uFE0F'}</div>
-                        <h4>{t('whyUs.cards.security.title')}</h4>
-                        <p>{t('whyUs.cards.security.description')}</p>
+                        <h4 dangerouslySetInnerHTML={{ __html: t('whyUs.cards.security.title') }} />
+                        <p dangerouslySetInnerHTML={{ __html: t('whyUs.cards.security.description') }} />
                     </div>
                     <div className="why-card card-gold">
                         <div className="why-card-icon">{'\u{1F4FA}'}</div>
-                        <h4>{t('whyUs.cards.quality.title')}</h4>
-                        <p>{t('whyUs.cards.quality.description')}</p>
+                        <h4 dangerouslySetInnerHTML={{ __html: t('whyUs.cards.quality.title') }} />
+                        <p dangerouslySetInnerHTML={{ __html: t('whyUs.cards.quality.description') }} />
                     </div>
                 </div>
             </div>

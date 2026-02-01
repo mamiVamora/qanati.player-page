@@ -1,94 +1,74 @@
-/* ═══════════════════════════════════════════════════════════
-   نظام الألوان - Qanati Player
-   ═══════════════════════════════════════════════════════════ */
-
 :root {
-    /* ───────────────────────────────────────────────────────
-     الألوان الأساسية (Primary Colors)
-     ─────────────────────────────────────────────────────── */
-    --color-cyan: #00E5FF;
-    --color-cyan-light: #33EBFF;
-    --color-cyan-dark: #00B8D4;
+    /* ═══════════════════════════════════════════════════════════
+       The Masterpiece Palette - No Default Colors Policy
+       ═══════════════════════════════════════════════════════════ */
 
-    --color-magenta: #E91E63;
-    --color-magenta-light: #FF4081;
-    --color-magenta-dark: #C2185B;
+    /* Basic Obsidian Depth (Base) */
+    --color-obsidian: #04080F;
+    --color-obsidian-light: #0D1B2A;
+    --color-background: var(--color-obsidian);
 
-    --color-purple: #9C27B0;
-    --color-purple-light: #BA68C8;
-    --color-purple-dark: #7B1FA2;
+    /* Metallic Silver & Platinums (Instead of White) */
+    --color-platinum: #E0E1DD;
+    --color-silver-mist: #A9D6E5;
+    --color-ghost-blue: #89C2D9;
+    --text-primary: var(--color-platinum);
+    --text-secondary: var(--color-ghost-blue);
 
-    /* ───────────────────────────────────────────────────────
-     الألوان الإضافية (Accent Colors)
-     ─────────────────────────────────────────────────────── */
-    --color-gold: #FFD700;
-    --color-gold-light: #FFE55C;
-    --color-gold-dark: #FFC107;
+    /* The "Engine" Scale (Cobalt & Ice) */
+    --color-cobalt: #0077B6;
+    --color-ice-cyan: #00B4D8;
+    --color-arctic-glow: #90E0EF;
 
-    --color-electric-blue: #00F0FF;
-    --color-neon-pink: #FF10F0;
+    /* The "Experience" Scale (Magenta & Electric) */
+    --color-electric-magenta: #FF006E;
+    --color-neon-rose: #FB5607;
+    --color-deep-pink: #C9184A;
 
-    /* ───────────────────────────────────────────────────────
-     الخلفيات (Backgrounds)
-     ─────────────────────────────────────────────────────── */
-    --bg-primary: #0A0E1A;
-    --bg-secondary: #141927;
-    --bg-tertiary: #1E2538;
+    /* The "Logic" Scale (Royal Purples) */
+    --color-royal-purple: #3A0CA3;
+    --color-neon-purple: #7209B7;
+    --color-soft-violet: #B79CED;
 
-    /* خلفيات زجاجية (Glassmorphism) */
-    --glass-bg: rgba(20, 25, 39, 0.6);
-    --glass-bg-hover: rgba(20, 25, 39, 0.8);
-    --glass-border: rgba(0, 229, 255, 0.2);
+    /* The "Luxury" Scale (Antique Golds) */
+    --color-antique-gold: #FFD60A;
+    --color-bronze-sun: #FFC300;
+    --color-copper-glow: #D00000;
 
-    /* ───────────────────────────────────────────────────────
-     التوهج (Glow Effects)
-     ─────────────────────────────────────────────────────── */
-    --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.5),
-        0 0 40px rgba(0, 229, 255, 0.3),
-        0 0 60px rgba(0, 229, 255, 0.1);
+    /* Semantic Aliases */
+    --color-cyan: var(--color-ice-cyan);
+    --color-magenta: var(--color-electric-magenta);
+    --color-purple: var(--color-neon-purple);
+    --color-gold: var(--color-antique-gold);
 
-    --glow-magenta: 0 0 20px rgba(233, 30, 99, 0.5),
-        0 0 40px rgba(233, 30, 99, 0.3),
-        0 0 60px rgba(233, 30, 99, 0.1);
+    /* ═══════════════════════════════════════════════════════════
+       Gradients & Glass
+       ═══════════════════════════════════════════════════════════ */
 
-    --glow-purple: 0 0 20px rgba(156, 39, 176, 0.5),
-        0 0 40px rgba(156, 39, 176, 0.3),
-        0 0 60px rgba(156, 39, 176, 0.1);
+    --glass-bg: rgba(13, 27, 42, 0.6);
+    --glass-bg-hover: rgba(13, 27, 42, 0.8);
+    --glass-border: rgba(144, 224, 239, 0.2);
 
-    /* ───────────────────────────────────────────────────────
-     التدرجات (Gradients)
-     ─────────────────────────────────────────────────────── */
+    --gradient-masterpiece: linear-gradient(135deg,
+            var(--color-obsidian) 0%,
+            var(--color-royal-purple) 50%,
+            var(--color-obsidian) 100%);
 
-    /* تدرج سيان → بنفسجي */
-    --gradient-primary: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+    --gradient-industrial-gold: linear-gradient(135deg,
+            var(--color-antique-gold) 0%,
+            var(--color-bronze-sun) 100%);
 
-    /* تدرج سيان → وردي */
-    --gradient-secondary: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-magenta) 100%);
+    --gradient-arctic: linear-gradient(135deg,
+            var(--color-cobalt) 0%,
+            var(--color-ice-cyan) 100%);
 
-    /* تدرج ثلاثي (سيان → بنفسجي → وردي) */
-    --gradient-triple: linear-gradient(135deg,
-            var(--color-cyan) 0%,
-            var(--color-purple) 50%,
-            var(--color-magenta) 100%);
+    /* ═══════════════════════════════════════════════════════════
+       Glows & Shadows (Soft Diffuse)
+       ═══════════════════════════════════════════════════════════ */
 
-    /* تدرج شعاعي */
-    --gradient-radial: radial-gradient(circle,
-            var(--color-cyan) 0%,
-            var(--color-purple) 50%,
-            var(--bg-primary) 100%);
+    --glow-cyan: 0 0 30px rgba(0, 180, 216, 0.4);
+    --glow-magenta: 0 0 30px rgba(255, 0, 110, 0.4);
+    --glow-gold: 0 0 30px rgba(255, 214, 10, 0.4);
 
-    /* تدرج نصي متحرك */
-    --gradient-text-animate: linear-gradient(90deg,
-            var(--color-cyan),
-            var(--color-purple),
-            var(--color-magenta),
-            var(--color-cyan));
-
-    /* ───────────────────────────────────────────────────────
-     الظلال (Shadows)
-     ─────────────────────────────────────────────────────── */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
-    --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.8);
 }

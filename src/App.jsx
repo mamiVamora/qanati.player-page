@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { TranslationProvider } from './i18n/useTranslation';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -6,6 +7,8 @@ import Hero from './sections/Hero';
 import Trust from './sections/Trust';
 import WhyUs from './sections/WhyUs';
 import Features from './sections/Features';
+import MediaKit from './sections/MediaKit';
+import FAQ from './sections/FAQ';
 import Downloads from './sections/Downloads';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
@@ -16,16 +19,18 @@ import './styles/global.css';
 const HomePage = () => (
   <>
     <Hero />
-    <Trust />
+    <MediaKit />
     <WhyUs />
     <Features />
+    <FAQ />
     <Downloads />
+    <Trust />
   </>
 );
 
 function App() {
   return (
-    <>
+    <TranslationProvider>
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -35,7 +40,7 @@ function App() {
         <Route path="/ip-policy" element={<IPPolicy />} />
       </Routes>
       <Footer />
-    </>
+    </TranslationProvider>
   );
 }
 

@@ -5,25 +5,22 @@ const Features = () => {
     const { t } = useTranslation();
 
     const features = [
-        // المحرك والذكاء (Engine)
-        { id: 'mediakit', category: 'engine', icon: '/icons/icon_mediakit_engine.png', color: 'cyan' },
-        { id: 'performance', category: 'engine', icon: '/icons/icon_hardware_intelligence.png', color: 'purple' },
-        { id: 'ai', category: 'engine', icon: '/icons/icon_ai_recommendations.png', color: 'magenta' },
-        { id: 'predictive', category: 'engine', icon: '/icons/icon_hardware_intelligence.png', color: 'gold' }, // Using same icon for now
-        { id: 'stats', category: 'engine', icon: '/icons/icon_server_stats.png', color: 'cyan' },
+        { id: 'mediakit', category: 'engine', icon: '/icons/icon_mediakit_engine.webp', color: 'cyan' },
+        { id: 'performance', category: 'engine', icon: '/icons/icon_hardware_intelligence.webp', color: 'purple' },
+        { id: 'ai', category: 'engine', icon: '/icons/icon_ai_recommendations.webp', color: 'magenta' },
+        { id: 'predictive', category: 'engine', icon: '/icons/icon_hardware_intelligence.webp', color: 'gold' }, // Using same icon for now
+        { id: 'stats', category: 'engine', icon: '/icons/icon_server_stats.webp', color: 'cyan' },
 
-        // التنشئة البصرية (Visual)
-        { id: 'glassmorphism', category: 'visual', icon: '/icons/icon_glassmorphism_ui.png', color: 'cyan' },
-        { id: 'multiview', category: 'visual', icon: '/icons/icon_multiview.png', color: 'magenta' },
-        { id: 'pip', category: 'visual', icon: '/icons/icon_picture_in_picture.png', color: 'gold' },
-        { id: 'audio', category: 'visual', icon: '/icons/icon_audio_interactions.png', color: 'purple' },
+        { id: 'glassmorphism', category: 'visual', icon: '/icons/icon_glassmorphism_ui.webp', color: 'cyan' },
+        { id: 'multiview', category: 'visual', icon: '/icons/icon_multiview.webp', color: 'magenta' },
+        { id: 'pip', category: 'visual', icon: '/icons/icon_picture_in_picture.webp', color: 'gold' },
+        { id: 'audio', category: 'visual', icon: '/icons/icon_audio_interactions.webp', color: 'purple' },
 
-        // السيادة والتحكم (Control)
-        { id: 'commandCenter', category: 'control', icon: '/icons/icon_command_center.png', color: 'gold' },
-        { id: 'parentalControl', category: 'control', icon: '/icons/icon_parental_control.png', color: 'purple' },
-        { id: 'recording', category: 'control', icon: '/icons/icon_recording_download.png', color: 'magenta' },
-        { id: 'voice', category: 'control', icon: '/icons/icon_voice_search.png', color: 'cyan' },
-        { id: 'trailers', category: 'control', icon: '/icons/icon_smart_trailers.png', color: 'magenta' }
+        { id: 'commandCenter', category: 'control', icon: '/icons/icon_command_center.webp', color: 'gold' },
+        { id: 'parentalControl', category: 'control', icon: '/icons/icon_parental_control.webp', color: 'purple' },
+        { id: 'recording', category: 'control', icon: '/icons/icon_recording_download.webp', color: 'magenta' },
+        { id: 'voice', category: 'control', icon: '/icons/icon_voice_search.webp', color: 'cyan' },
+        { id: 'trailers', category: 'control', icon: '/icons/icon_smart_trailers.webp', color: 'magenta' }
     ];
 
     const categories = [
@@ -35,17 +32,16 @@ const Features = () => {
     return (
         <section className="features" id="features">
             <div className="features-container">
-                {/* العنوان الرئيسي */}
                 <div className="features-header">
                     <h2 className="features-title text-gradient-animate">
                         {t('features.sectionTitle')}
                     </h2>
-                    <p className="features-subtitle">
-                        {t('features.sectionSubtitle')}
-                    </p>
+                    <p
+                        className="features-subtitle"
+                        dangerouslySetInnerHTML={{ __html: t('features.sectionSubtitle') }}
+                    />
                 </div>
 
-                {/* المميزات مقسمة حسب الفئات */}
                 {categories.map((category) => (
                     <div key={category.id} className="features-category">
                         <h3 className="category-title">
@@ -66,12 +62,14 @@ const Features = () => {
                                         </div>
 
                                         <div className="feature-content">
-                                            <h4 className="feature-title">
-                                                {t(`features.items.${feature.id}.title`)}
-                                            </h4>
-                                            <p className="feature-description">
-                                                {t(`features.items.${feature.id}.description`)}
-                                            </p>
+                                            <h4
+                                                className="feature-title"
+                                                dangerouslySetInnerHTML={{ __html: t(`features.items.${feature.id}.title`) }}
+                                            />
+                                            <p
+                                                className="feature-description"
+                                                dangerouslySetInnerHTML={{ __html: t(`features.items.${feature.id}.description`) }}
+                                            />
                                         </div>
                                     </div>
                                 ))}

@@ -99,37 +99,11 @@ const Downloads = () => {
         return icons[type] || icons['apk'];
     };
 
-    const CategoryIcon = ({ type }) => {
-        const icons = {
-            'android': (
-                <svg viewBox="0 0 24 24" fill="#3DDC84">
-                    <path d="M17.523 15.3414C17.0609 15.3414 16.6917 14.9721 16.6917 14.5101C16.6917 14.0481 17.0609 13.6788 17.523 13.6788C17.985 13.6788 18.3542 14.0481 18.3542 14.5101C18.3542 14.9721 17.985 15.3414 17.523 15.3414M6.47702 15.3414C6.01502 15.3414 5.64575 14.9721 5.64575 14.5101C5.64575 14.0481 6.01502 13.6788 6.47702 13.6788C6.93902 13.6788 7.30828 14.0481 7.30828 14.5101C7.30828 14.9721 6.93902 15.3414 6.47702 15.3414M17.9317 11.2319L19.5398 8.44192C19.658 8.23667 19.5873 7.97395 19.3815 7.85575C19.1758 7.73755 18.913 7.80873 18.7954 8.01449L17.1654 10.8415C15.7533 10.1917 13.9882 9.8313 12.0003 9.8313C10.0125 9.8313 8.2472 10.1917 6.83511 10.8415L5.20516 8.01449C5.08756 7.80873 4.82479 7.73755 4.6191 7.85575C4.41334 7.97395 4.34316 8.23667 4.46077 8.44192L6.06881 11.2319C3.12061 12.8687 1.09631 15.8675 0.844727 19.4172H23.1558C22.9042 15.8675 20.8799 12.8687 17.9317 11.2319" />
-                </svg>
-            ),
-            'apple': (
-                <svg viewBox="0 0 24 24" fill="#FFFFFF">
-                    <path d="M17.05 20.28c-.96.95-2.22 1.5-3.34 1.5-1.12 0-2.45-.63-4.14-1.67C7.88 19.07 6.7 17.26 6.7 15.22c0-2.67 2.1-4.73 4.7-4.73 1.25 0 2.37.5 3.12 1.05.75.55 1.7.55 2.45 0 .75-.55 1.88-1.05 3.12-1.05 1.05 0 2.1.25 2.92.75l.13.08c-.68 1.1-.8 2.5-.33 3.8.35.95 1 1.7 1.83 2.22l.14.07c-.45 1.4-.95 2.6-1.5 3.55-.95 1.6-2.05 2.1-3.23 2.1-.2 0-.4 0-.6-.05zM12.03 9.47c-.02-2.12 1.52-3.95 3.48-4.47l.15-.03c.1-.02.2-.03.3-.03 2.22 0 4.02 1.8 4.02 4.02 0 .1 0 .2-.02.3l-.03.15c-.52 1.96-2.35 3.48-4.47 3.5-.02 0-.03 0-.05 0-2.1 0-3.9-1.63-4-3.72l-.02-.15.02-.07z" />
-                </svg>
-            ),
-            'smart-tv': (
-                <svg viewBox="0 0 24 24" fill="#00D6FF">
-                    <path d="M21 3H3C1.9 3 1 3.9 1 5V17C1 18.1 1.9 19 3 19H8V21H16V19H21C22.1 19 23 18.1 23 17V5C23 3.9 22.1 3 21 3M21 17H3V5H21V17Z" />
-                </svg>
-            ),
-            'windows': (
-                <svg viewBox="0 0 24 24" fill="#0078D7">
-                    <path d="M3 12V6.36L10.29 5.4V12H3M11.23 5.28L21.78 4L22 12H11.23V5.28M3 12.85H10.29V19.65L3 18.6V12.85M11.23 12.85H22V21L11.23 19.72V12.85Z" />
-                </svg>
-            )
-        };
-        return icons[type] || null;
-    };
-
     const categories = [
         {
             id: 'android',
             titleKey: 'downloads.categories.android',
-            categoryIcon: 'android',
+            icon: '🤖',
             stores: [
                 { id: 'google-play', name: 'Google Play', url: '#', available: false },
                 { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
@@ -142,7 +116,7 @@ const Downloads = () => {
         {
             id: 'apple',
             titleKey: 'downloads.categories.apple',
-            categoryIcon: 'apple',
+            icon: '🍎',
             stores: [
                 { id: 'app-store', name: 'App Store', url: '#', available: false }
             ]
@@ -150,7 +124,7 @@ const Downloads = () => {
         {
             id: 'smart-tv',
             titleKey: 'downloads.categories.smarttv',
-            categoryIcon: 'smart-tv',
+            icon: '📺',
             stores: [
                 { id: 'samsung', name: 'Samsung TV', url: '#', available: false },
                 { id: 'lg', name: 'LG webOS', url: '#', available: false }
@@ -159,7 +133,7 @@ const Downloads = () => {
         {
             id: 'windows',
             titleKey: 'downloads.categories.windows',
-            categoryIcon: 'windows',
+            icon: '🪟',
             stores: [
                 { id: 'microsoft', name: 'Microsoft Store', url: 'https://apps.microsoft.com/detail/9NH6MK4ZZRG7?hl=en-us&gl=SA&ocid=pdpshare', available: true }
             ]
@@ -181,9 +155,7 @@ const Downloads = () => {
                 {categories.map((category) => (
                     <div key={category.id} className="download-category">
                         <h3 className="category-title">
-                            <span className="category-icon">
-                                <CategoryIcon type={category.categoryIcon} />
-                            </span>
+                            <span className="category-icon">{category.icon}</span>
                             {t(category.titleKey)}
                         </h3>
 

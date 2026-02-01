@@ -1,9 +1,10 @@
 import { useTranslation } from '../i18n/useTranslation';
-import PromoVideo from '../components/PromoVideo';
 import './Hero.css';
 
 const Hero = () => {
     const { t } = useTranslation();
+    const tickerItems = t('hero.ticker.items');
+    const items = Array.isArray(tickerItems) ? tickerItems : [];
 
     return (
         <section className="hero" id="hero">
@@ -23,9 +24,10 @@ const Hero = () => {
                         {t('hero.subtitle')}
                     </p>
 
-                    <p className="hero-description">
-                        {t('hero.description')}
-                    </p>
+                    <p
+                        className="hero-description"
+                        dangerouslySetInnerHTML={{ __html: t('hero.description') }}
+                    />
 
                     <div className="hero-actions">
                         <a href="#downloads" className="hero-cta">
@@ -36,10 +38,21 @@ const Hero = () => {
                             {t('hero.secondaryCta')}
                         </a>
                     </div>
-                </div>
 
-                <div className="hero-visual">
-                    <PromoVideo />
+                    {items.length > 0 && (
+                        <div className="hero-ticker" aria-label={t('hero.ticker.label')}>
+                            <span className="ticker-label">{t('hero.ticker.label')}</span>
+                            <div className="ticker-track">
+                                <div className="ticker-items">
+                                    {items.concat(items).map((item, index) => (
+                                        <span key={index} className="ticker-item">
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 <div className="scroll-indicator">

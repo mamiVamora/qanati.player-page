@@ -16,12 +16,11 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="container navbar-container">
-                {/* الشعار */}
                 <a href="/" className="navbar-logo">
                     <img src="/logo.jpg" alt="Qanati Player Logo" />
+                    <span className="navbar-tagline">{t('nav.tagline')}</span>
                 </a>
 
-                {/* روابط التنقل - Desktop */}
                 <ul className="navbar-links">
                     {navLinks.map((link, index) => (
                         <li key={index}>
@@ -42,7 +41,6 @@ const Navbar = () => {
                     <span className="lang-text">{t('nav.languageToggle')}</span>
                 </button>
 
-                {/* زر القائمة - Mobile */}
                 <button
                     className="navbar-toggle"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -54,7 +52,6 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* القائمة المنسدلة - Mobile */}
             {isMenuOpen && (
                 <div className="navbar-mobile-menu">
                     {navLinks.map((link, index) => (
