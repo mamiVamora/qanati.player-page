@@ -2,7 +2,7 @@
     "hero": {
         "title": "قناتي بلاير",
         "subtitle": "المعيار الذهبي للمشاهدة الفاخرة",
-        "description": "ليس مجرد مشغل وسائط، بل هو <span class='text-highlight-silver'>سينما متكاملة في جيبك</span>، يقدم تجربة <span class='text-highlight-cyan'>بصرية مبهرة</span> بفضل محرك <span class='text-highlight-cyan'>MediaKit الثوري</span> وتصميم <span class='text-highlight-gold'>Glassmorphism الفاخر</span>.",
+        "description": "ليس مجرد مشغل وسائط، بل هو <span class='text-highlight-silver'>سينما متكاملة في جيبك</span>. وسيلتك الأسرع لـ <span class='text-highlight-cyan'>تفعيل سيرفرك الخاص</span> أو البدء في <span class='text-highlight-gold'>مشروعك المستقل</span> بمميزات احترافية.",
         "cta": "حمّل الآن",
         "secondaryCta": "لماذا نحن؟",
         "ticker": {
@@ -129,7 +129,7 @@
         "craftedWith": "برمج بفخر من قبل",
         "companyName": "قناتي تِك",
         "copyright": "جميع الحقوق محفوظة © 2026",
-        "note": "ملاحظة هامة: التطبيق عبارة عن مشغل وسائط متطور ولا يحتوي على محتوى مثبت مسبقاً. لتفعيل سيرفرك الخاص، يرجى التواصل معنا.",
+        "note": "ملاحظة هامة: التطبيق عبارة عن مشغل وسائط متطور ولا يحتوي على محتوى مثبت مسبقاً. نحن نوفر الأدوات والمنصة اللازمة للتجار وملاك السيرفرات لتفعيل خدماتهم وبيعها باحترافية.",
         "backToHome": "← العودة للرئيسية",
         "lastUpdated": "آخر تحديث: يناير 2026"
     },

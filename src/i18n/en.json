@@ -2,7 +2,7 @@
     "hero": {
         "title": "Qanati Player",
         "subtitle": "The Golden Standard for Premium Viewing",
-        "description": "Not just a media player, but a <span class='text-highlight-silver'>complete cinema in your pocket</span>, delivering a <span class='text-highlight-cyan'>stunning visual experience</span> powered by the revolutionary <span class='text-highlight-cyan'>MediaKit Engine</span> and premium <span class='text-highlight-gold'>Glassmorphism design</span>.",
+        "description": "More than just a media player, it's a cinema in your pocket. Your fastest way to <span class='text-highlight-cyan'>activate your private server</span> or start your <span class='text-highlight-gold'>independent business</span> with professional features.",
         "cta": "Download Now",
         "secondaryCta": "Why Us?",
         "ticker": {
@@ -129,7 +129,7 @@
         "craftedWith": "Crafted with pride by",
         "companyName": "Qanati Tech",
         "copyright": "All rights reserved ? 2026",
-        "note": "Important: This app is a professional media player and does not include preloaded content. To activate your server, please contact us.",
+        "note": "Important: This app is a professional media player and does not include preloaded content. We provide the platform for merchants and server owners to activate and sell their services professionally.",
         "backToHome": "? Back to Home",
         "lastUpdated": "Last updated: January 2026"
     },
