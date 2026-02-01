@@ -205,38 +205,99 @@
     background: var(--glass-bg-hover);
     border-color: var(--color-cyan);
     box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
-    transform: scale(1.02);
+    transform: translateY(-2px);
 }
 
-.footer-whatsapp {
+/* ═══════════════════════════════════════════════════════════
+   Social Links Grid
+   ═══════════════════════════════════════════════════════════ */
+
+.social-links-grid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .social-links-grid {
+        justify-content: flex-start;
+    }
+}
+
+.social-btn {
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(37, 211, 102, 0.1));
-    border: 2px solid #25D366;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 12px;
-    padding: 0.875rem 1.25rem;
-    color: #25D366;
+    font-size: 1.25rem;
     text-decoration: none;
-    font-weight: var(--weight-semibold);
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.footer-whatsapp:hover {
-    background: linear-gradient(135deg, rgba(37, 211, 102, 0.3), rgba(37, 211, 102, 0.15));
-    box-shadow: 0 0 35px rgba(37, 211, 102, 0.4);
-    transform: scale(1.05);
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.whatsapp-icon {
-    font-size: 1.5rem;
+.social-btn:hover::before {
+    opacity: 0.1;
 }
 
-.whatsapp-text {
-    font-size: 1rem;
+.social-btn:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.5);
 }
+
+.whatsapp-btn:hover {
+    background: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+    color: #fff;
+}
+
+.telegram-btn:hover {
+    background: #0088cc;
+    border-color: #0088cc;
+    box-shadow: 0 0 20px rgba(0, 136, 204, 0.5);
+    color: #fff;
+}
+
+.facebook-btn:hover {
+    background: #1877F2;
+    border-color: #1877F2;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.5);
+    color: #fff;
+}
+
+.twitter-btn:hover {
+    background: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.youtube-btn:hover {
+    background: #FF0000;
+    border-color: #FF0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Old WhatsApp Link Removed - Replaced by Social Grid */
 
 @media (min-width: 768px) {
 

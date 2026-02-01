@@ -37,21 +37,31 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* العمود الرابع: التواصل */}
+                    {/* العمود الرابع: التواصل والشبكات */}
                     <div className="footer-column">
                         <h3 className="footer-title">{t('footer.contact.title')}</h3>
                         <p className="contact-label">{t('footer.contact.support')}</p>
+
+                        <div className="social-links-grid">
+                            <a href="https://whatsapp.com/channel/0029VbBx35uD38CK2ud8nh43" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp-btn" title={t('footer.contact.whatsapp')}>
+                                <span>💬</span>
+                            </a>
+                            <a href="https://t.me/qanati_tec" target="_blank" rel="noopener noreferrer" className="social-btn telegram-btn" title={t('footer.contact.telegram')}>
+                                <span>✈️</span>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61587094332049" target="_blank" rel="noopener noreferrer" className="social-btn facebook-btn" title={t('footer.contact.facebook')}>
+                                <span>👥</span>
+                            </a>
+                            <a href="https://x.com/QanatiTec" target="_blank" rel="noopener noreferrer" className="social-btn twitter-btn" title={t('footer.contact.twitter')}>
+                                <span>𝕏</span>
+                            </a>
+                            <a href="https://www.youtube.com/@qanati_tec" target="_blank" rel="noopener noreferrer" className="social-btn youtube-btn" title={t('footer.contact.youtube')}>
+                                <span>🎬</span>
+                            </a>
+                        </div>
+
                         <a href="mailto:qanatitec@gmail.com" className="footer-email">
                             qanatitec@gmail.com
-                        </a>
-                        <a
-                            href="https://wa.me/905340218618"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="footer-whatsapp"
-                        >
-                            <span className="whatsapp-icon">💬</span>
-                            <span className="whatsapp-text">{t('footer.contact.whatsapp')}</span>
                         </a>
                     </div>
                 </div>

@@ -1,32 +1,34 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from '../i18n/useTranslation';
 import './PromoVideo.css';
 
 const PromoVideo = () => {
+    const { t } = useTranslation();
     const [activeIndex, setActiveIndex] = useState(0);
 
     const slides = [
         {
-            title: 'محرك MediaKit الثوري',
-            subtitle: 'سلاسة 4K HDR بلا حدود',
-            icon: '⚡',
+            title: t('promoVideo.slides.mediakit.title'),
+            subtitle: t('promoVideo.slides.mediakit.subtitle'),
+            icon: '\u{26A1}',
             color: 'cyan'
         },
         {
-            title: '4 شاشات متزامنة',
-            subtitle: 'تعدد مهام حقيقي للمحترفين',
-            icon: '📺',
+            title: t('promoVideo.slides.multiview.title'),
+            subtitle: t('promoVideo.slides.multiview.subtitle'),
+            icon: '\u{1F4FA}',
             color: 'magenta'
         },
         {
-            title: 'ذكاء العتاد والشبكة',
-            subtitle: 'بث مستقر في كل الظروف',
-            icon: '🧠',
+            title: t('promoVideo.slides.intelligence.title'),
+            subtitle: t('promoVideo.slides.intelligence.subtitle'),
+            icon: '\u{1F9E0}',
             color: 'purple'
         },
         {
-            title: 'واجهة Glassmorphism',
-            subtitle: 'فخامة التصميم في كل تفصيل',
-            icon: '✨',
+            title: t('promoVideo.slides.glass.title'),
+            subtitle: t('promoVideo.slides.glass.subtitle'),
+            icon: '\u{2728}',
             color: 'gold'
         }
     ];
@@ -67,7 +69,7 @@ const PromoVideo = () => {
                     ))}
                 </div>
 
-                <div className="v-label">PRIME ENGINE ACTIVE</div>
+                <div className="v-label">{t('promoVideo.label')}</div>
             </div>
         </div>
     );

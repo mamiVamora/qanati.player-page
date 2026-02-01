@@ -10,7 +10,6 @@ const Hero = () => {
             <div className="hero-background"></div>
 
             <div className="hero-container">
-                {/* الشعار والنصوص */}
                 <div className="hero-content">
                     <div className="hero-logo">
                         <img src="/logo.jpg" alt="Qanati Player" />
@@ -31,20 +30,18 @@ const Hero = () => {
                     <div className="hero-actions">
                         <a href="#downloads" className="hero-cta">
                             <span className="cta-text">{t('hero.cta')}</span>
-                            <span className="cta-icon">↓</span>
+                            <span className="cta-icon">{'\u2193'}</span>
                         </a>
                         <a href="#why-us" className="hero-secondary-cta">
-                            لماذا نحن؟
+                            {t('hero.secondaryCta')}
                         </a>
                     </div>
                 </div>
 
-                {/* الفيديو الترويجي التفاعلي */}
                 <div className="hero-visual">
                     <PromoVideo />
                 </div>
 
-                {/* مؤشر التمرير */}
                 <div className="scroll-indicator">
                     <div className="scroll-line"></div>
                     <div className="scroll-dot"></div>

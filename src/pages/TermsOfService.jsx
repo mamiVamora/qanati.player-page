@@ -8,115 +8,29 @@ const TermsOfService = () => {
     return (
         <div className="legal-page">
             <div className="legal-container">
-                <Link to="/" className="back-link">← العودة للرئيسية</Link>
+                <Link to="/" className="back-link">{t('footer.backToHome')}</Link>
 
-                <h1 className="legal-title">شروط الاستخدام</h1>
-                <p className="legal-update">آخر تحديث: يناير 2026</p>
+                <h1 className="legal-title">{t('legalPages.terms.title')}</h1>
+                <p className="legal-update">{t('footer.lastUpdated')}</p>
 
                 <section className="legal-section">
-                    <h2>1. قبول الشروط</h2>
-                    <p>
-                        باستخدامك تطبيق قناتي بلاير ("التطبيق")، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام التطبيق.
-                    </p>
+                    <h2>{t('legalPages.terms.s1.h')}</h2>
+                    <p>{t('legalPages.terms.s1.p')}</p>
                 </section>
 
                 <section className="legal-section">
-                    <h2>2. الترخيص والاستخدام</h2>
-                    <h3>2.1 منح الترخيص</h3>
-                    <p>
-                        نمنحك ترخيصاً محدوداً وغير حصري وغير قابل للتحويل لاستخدام التطبيق للأغراض الشخصية غير التجارية.
-                    </p>
-
-                    <h3>2.2 القيود</h3>
-                    <p>يُمنع عليك:</p>
-                    <ul>
-                        <li>نسخ أو تعديل أو توزيع التطبيق أو أي جزء منه</li>
-                        <li>إجراء هندسة عكسية (Reverse Engineering) للكود المصدري</li>
-                        <li>إزالة أو تعديل أي علامات تجارية أو إشعارات حقوق نشر</li>
-                        <li>استخدام التطبيق لأي غرض غير قانوني أو احتيالي</li>
-                        <li>بيع أو تأجير أو ترخيص التطبيق من الباطن</li>
-                    </ul>
+                    <h2>{t('legalPages.terms.s2.h')}</h2>
+                    <p>{t('legalPages.terms.s2.p')}</p>
                 </section>
 
                 <section className="legal-section">
-                    <h2>3. المحتوى والمسؤولية</h2>
-                    <h3>3.1 مصادر المحتوى</h3>
-                    <p>
-                        <strong>قناتي بلاير هو مشغل وسائط فقط.</strong> التطبيق لا يستضيف أو يوفر أي محتوى مباشر. المستخدم مسؤول بالكامل عن:
-                    </p>
-                    <ul>
-                        <li>الحصول على اشتراكات IPTV القانونية</li>
-                        <li>التأكد من شرعية المحتوى المستهلك</li>
-                        <li>الامتثال لقوانين حقوق النشر في بلده</li>
-                    </ul>
-
-                    <h3>3.2 إخلاء المسؤولية</h3>
-                    <p>
-                        نحن لسنا مسؤولين عن جودة أو قانونية أو دقة المحتوى الذي تصل إليه عبر خدمات IPTV الخارجية.
-                    </p>
+                    <h2>{t('legalPages.terms.s3.h')}</h2>
+                    <p>{t('legalPages.terms.s3.p')}</p>
                 </section>
 
                 <section className="legal-section">
-                    <h2>4. الحسابات والأمان</h2>
-                    <ul>
-                        <li>أنت مسؤول عن الحفاظ على سرية بيانات اشتراكك</li>
-                        <li>يجب إخطارنا فوراً بأي استخدام غير مصرح به</li>
-                        <li>نحن غير مسؤولين عن أي خسائر ناتجة عن عدم حماية حسابك</li>
-                    </ul>
-                </section>
-
-                <section className="legal-section">
-                    <h2>5. التحديثات والصيانة</h2>
-                    <p>
-                        نحتفظ بالحق في تحديث التطبيق أو إيقاف ميزات معينة دون إشعار مسبق. التحديثات قد تتطلب قبول شروط جديدة.
-                    </p>
-                </section>
-
-                <section className="legal-section">
-                    <h2>6. إنهاء الخدمة</h2>
-                    <p>يحق لنا إنهاء أو تعليق وصولك للتطبيق فوراً في حال:</p>
-                    <ul>
-                        <li>انتهاكك لأي من هذه الشروط</li>
-                        <li>استخدام التطبيق بطريقة تضر بالمستخدمين الآخرين</li>
-                        <li>أنشطة احتيالية أو غير قانونية</li>
-                    </ul>
-                </section>
-
-                <section className="legal-section">
-                    <h2>7. حدود المسؤولية</h2>
-                    <p>
-                        <strong>يُقدم التطبيق "كما هو" دون أي ضمانات.</strong> إلى أقصى حد يسمح به القانون:
-                    </p>
-                    <ul>
-                        <li>لا نضمن عمل التطبيق دون انقطاع أو خلو من الأخطاء</li>
-                        <li>لسنا مسؤولين عن أي أضرار مباشرة أو غير مباشرة</li>
-                        <li>الحد الأقصى لمسؤوليتنا هو قيمة الترخيص المدفوع (إن وجد)</li>
-                    </ul>
-                </section>
-
-                <section className="legal-section">
-                    <h2>8. الملكية الفكرية</h2>
-                    <p>
-                        جميع حقوق الملكية الفكرية في التطبيق (الكود، التصميم، الشعارات) مملوكة لـ قناتي تِك. أي استنساخ غير مصرح به سيؤدي إلى:
-                    </p>
-                    <ul>
-                        <li>ملاحقة قانونية فورية</li>
-                        <li>طلب إزالة من متاجر التطبيقات</li>
-                        <li>تعويضات مالية</li>
-                    </ul>
-                </section>
-
-                <section className="legal-section">
-                    <h2>9. القانون الحاكم</h2>
-                    <p>
-                        تخضع هذه الشروط لقوانين المملكة العربية السعودية. أي نزاعات يتم حلها عبر المحاكم المختصة.
-                    </p>
-                </section>
-
-                <section className="legal-section">
-                    <h2>10. التواصل</h2>
-                    <p>لأي استفسارات قانونية:</p>
-                    <p className="contact-email">support@qanati.site</p>
+                    <h2>{t('legalPages.terms.s8.h')}</h2>
+                    <p>{t('legalPages.terms.s8.p')}</p>
                 </section>
             </div>
         </div>

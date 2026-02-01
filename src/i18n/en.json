@@ -2,22 +2,313 @@
     "hero": {
         "title": "Qanati Player",
         "subtitle": "The Golden Standard for Premium Viewing",
-        "description": "Not just a media player, but a complete cinema in your pocket",
-        "cta": "Download Now"
+        "description": "Not just a media player, but a complete cinema in your pocket.",
+        "cta": "Download Now",
+        "secondaryCta": "Why Us?"
     },
     "features": {
-        "sectionTitle": "Exceptional Features",
-        "sectionSubtitle": "Advanced technology redefining the viewing experience",
+        "sectionTitle": "Technical & Visual Excellence",
+        "sectionSubtitle": "We do not follow standards ? we create them. Discover power in every click.",
         "categories": {
-            "engine": "Technical Engine",
+            "engine": "Engine & Intelligence",
             "visual": "Visual Experience",
-            "smart": "Intelligence & Customization"
+            "control": "Control & Command"
         },
         "items": {
             "mediakit": {
                 "title": "Revolutionary MediaKit Engine",
-                "description": "The world's most powerful video processing engine, ensuring seamless 4K and HDR playback"
+                "description": "The core of the app: ultra-smooth 4K HDR playback with near?instant zapping."
+            },
+            "performance": {
+                "title": "Hardware & Network Intelligence",
+                "description": "Real?time device and network analysis to stabilize streaming under tough conditions."
+            },
+            "multiview": {
+                "title": "Professional Multi?View",
+                "description": "Watch up to 4 sources simultaneously with independent audio control."
+            },
+            "pip": {
+                "title": "Picture?in?Picture (PiP)",
+                "description": "Keep watching while using other apps with a smart, movable mini?window."
+            },
+            "glassmorphism": {
+                "title": "Glassmorphism UI",
+                "description": "A premium, elegant interface with smooth micro?animations."
+            },
+            "ai": {
+                "title": "AI?Powered Recommendations",
+                "description": "Personalized suggestions based on your viewing patterns."
+            },
+            "voice": {
+                "title": "Cinematic Voice Search",
+                "description": "Find content instantly with advanced speech recognition."
+            },
+            "trailers": {
+                "title": "Smart Trailer System",
+                "description": "Watch official trailers directly from the details page."
+            },
+            "stats": {
+                "title": "Live Server Stats",
+                "description": "Stay updated on your channels, movies, and series with real?time insights."
+            },
+            "commandCenter": {
+                "title": "Command Center",
+                "description": "A full control panel for advanced settings and privacy options."
+            },
+            "parentalControl": {
+                "title": "Parental Control",
+                "description": "One?tap content restrictions for a family?safe experience."
+            },
+            "recording": {
+                "title": "Recording & Download Hub",
+                "description": "Save live content in source quality for offline viewing."
+            },
+            "audio": {
+                "title": "Premium Audio Interactions",
+                "description": "Subtle audio feedback designed to enhance immersion."
+            },
+            "predictive": {
+                "title": "Predictive Performance Mode",
+                "description": "Smart caching and optimization for maximum speed and responsiveness."
             }
         }
+    },
+    "downloads": {
+        "title": "Download on Your Favorite Platforms",
+        "subtitle": "Available now on Android, Smart TVs, and Windows.",
+        "categories": {
+            "android": "Phones (Android)",
+            "smarttv": "Smart TVs",
+            "windows": "Computer",
+            "apple": "Apple (iOS/iPadOS)"
+        },
+        "downloadNow": "Download Now",
+        "comingSoon": "Coming Soon",
+        "directApk": "Direct Download (APK)",
+        "badges": {
+            "public": "Public"
+        }
+    },
+    "footer": {
+        "about": {
+            "title": "About Us",
+            "brand": "Qanati Tech",
+            "tagline": "We build what no one else does."
+        },
+        "links": {
+            "title": "Quick Links",
+            "home": "Home",
+            "features": "Features",
+            "downloads": "Downloads"
+        },
+        "legal": {
+            "title": "Legal",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "ip": "IP Policy"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "support": "Support & Inquiries:",
+            "whatsapp": "Chat on WhatsApp",
+            "telegram": "Telegram",
+            "facebook": "Facebook",
+            "twitter": "X (Twitter)",
+            "youtube": "YouTube"
+        },
+        "warning": "Warning: This project is protected by international intellectual property protocols. Digital fingerprints are embedded in code and UI to trace unauthorized copies. Legal action and account takedowns are immediate on any violation.",
+        "craftedWith": "Crafted with pride by",
+        "companyName": "Qanati Tech",
+        "copyright": "All rights reserved © 2026",
+        "note": "Important: This app is a professional media player and does not include pre?loaded content. To activate your server, please contact us.",
+        "backToHome": "← Back to Home",
+        "lastUpdated": "Last updated: January 2026"
+    },
+    "nav": {
+        "links": {
+            "home": "Home",
+            "features": "Features",
+            "whyUs": "Why Us",
+            "downloads": "Downloads"
+        },
+        "languageToggle": "Arabic",
+        "languageToggleLabel": "Switch language",
+        "menuLabel": "Menu"
+    },
+    "promoVideo": {
+        "label": "PRIME ENGINE ACTIVE",
+        "slides": {
+            "mediakit": {
+                "title": "Revolutionary MediaKit Engine",
+                "subtitle": "Unlimited 4K HDR smoothness"
+            },
+            "multiview": {
+                "title": "4 Synchronized Screens",
+                "subtitle": "Real multi?tasking for professionals"
+            },
+            "intelligence": {
+                "title": "Hardware & Network Intelligence",
+                "subtitle": "Stable streaming in every condition"
+            },
+            "glass": {
+                "title": "Glassmorphism UI",
+                "subtitle": "Luxury design in every detail"
+            }
+        }
+    },
+    "trust": {
+        "stats": {
+            "servers": {
+                "label": "Compatible Servers",
+                "description": "Full support for Xtream and M3U servers"
+            },
+            "ratings": {
+                "label": "User Ratings",
+                "description": "Based on 1,250+ real reviews"
+            },
+            "startup": {
+                "label": "Startup Time",
+                "description": "Powered by the MediaKit engine"
+            },
+            "updates": {
+                "label": "Regular Updates",
+                "value": "Weekly",
+                "description": "Continuous performance and security improvements"
+            }
+        }
+    },
+    "whyUs": {
+        "tag": "Technical Comparison",
+        "title": "Why \"Qanati Player\"?",
+        "subtitle": "A clear breakdown of the difference between sovereign architecture and traditional commercial solutions.",
+        "table": {
+            "feature": "Feature",
+            "qanati": "Qanati Player",
+            "others": "Other Players",
+            "vs": "VS"
+        },
+        "labels": {
+            "qanati": "Qanati Player",
+            "others": "Other Players"
+        },
+        "comparisons": {
+            "engine": {
+                "feature": "Playback Engine",
+                "qanati": "MediaKit Engine (4K HDR)",
+                "others": "Default Android engines",
+                "highlights": "Seamless playback with no stutter"
+            },
+            "multiview": {
+                "feature": "Multi?View",
+                "qanati": "4 synchronized screens in full resolution",
+                "others": "Single screen only",
+                "highlights": "Independent audio control per screen"
+            },
+            "performance": {
+                "feature": "Performance & Hardware",
+                "qanati": "Live Stats",
+                "others": "No stats available",
+                "highlights": "Detect latency and RAM usage"
+            },
+            "efficiency": {
+                "feature": "Resource Efficiency",
+                "qanati": "Smart decoding (AV1/H.265)",
+                "others": "High battery usage",
+                "highlights": "Lower device temperature"
+            }
+        },
+        "cards": {
+            "instantOn": {
+                "title": "Instant?On Speed",
+                "description": "Channel playback in under 0.5s thanks to smart cache optimizations."
+            },
+            "security": {
+                "title": "Technical Sovereignty",
+                "description": "Fully encrypted infrastructure protecting your data and connection."
+            },
+            "quality": {
+                "title": "8K + AV1 Support",
+                "description": "Latest compression tech for highest quality at lower bandwidth."
+            }
+        }
+    },
+    "legalPages": {
+        "privacy": {
+            "title": "Privacy Policy",
+            "s1": {
+                "h": "1. Introduction",
+                "p": "Qanati Tech (\"we\", \"our\", \"the Company\") is committed to protecting your privacy. This policy explains how we collect and protect your data when using Qanati Player (\"the App\")."
+            },
+            "s2": {
+                "h": "2. Data We Collect",
+                "h1": "2.1 Account Info",
+                "p1": "We may collect:",
+                "l1": [
+                    "Subscription Data (URLs, Usernames)",
+                    "Viewing preferences",
+                    "Device info (Type, OS)"
+                ],
+                "h2": "2.2 Usage Info",
+                "l2": [
+                    "Interaction logs",
+                    "Performance & crash analytics",
+                    "Network info (Speed, Quality)"
+                ]
+            },
+            "s3": {
+                "h": "3. How We Use Data",
+                "p": "We use information to provide services, personalize experience, analyze performance, and communicate updates."
+            },
+            "s4": {
+                "h": "4. Data Sharing",
+                "p": "We DO NOT sell your personal data. We only share it with tech partners for hosting or when required by law."
+            },
+            "s5": {
+                "h": "5. Security",
+                "p": "We use advanced encryption and local storage to ensure maximum privacy for your subscription details."
+            },
+            "s10": {
+                "h": "10. Contact",
+                "p": "For any inquiries: support@qanati.site"
+            }
+        },
+        "terms": {
+            "title": "Terms of Service",
+            "s1": {
+                "h": "1. Acceptance",
+                "p": "By using the App, you agree to comply with these terms and conditions in full."
+            },
+            "s2": {
+                "h": "2. License",
+                "p": "We grant you a limited, non-transferable license for personal, non-commercial use only."
+            },
+            "s3": {
+                "h": "3. Responsibility",
+                "p": "Qanati Player is a media player only. Users are responsible for providing legal content and obeying local laws."
+            },
+            "s8": {
+                "h": "8. Intellectual Property",
+                "p": "All rights are owned by Qanati Tech. Any unauthorized copying will lead to immediate legal action."
+            }
+        },
+        "ip": {
+            "title": "Intellectual Property Policy",
+            "s1": {
+                "h": "1. Ownership Statement",
+                "p": "Qanati Player is fully protected by international copyright laws and WIPO treaties."
+            },
+            "s2": {
+                "h": "2. Digital Fingerprinting",
+                "p": "⚠️ Unique digital watermarks are embedded in the code to trace any cloned version back to its source."
+            },
+            "s5": {
+                "h": "5. Legal Action",
+                "p": "🚨 In case of violation, we take immediate takedown actions, prosecution, and demand high financial damages."
+            }
+        }
+    },
+    "meta": {
+        "title": "Qanati Player - The Golden Standard for Premium Viewing",
+        "description": "Revolutionary media player with Glassmorphism design and superior performance."
     }
 }

@@ -109,7 +109,7 @@ const Downloads = () => {
                 { id: 'google-play', name: 'Google Play', url: '#', available: false },
                 { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
                 { id: 'huawei', name: 'Huawei AppGallery', url: '#', available: false },
-                { id: 'apk', name: 'تحميل مباشر (APK)', url: '#', available: false, badge: 'عام' },
+                { id: 'apk', name: t('downloads.directApk'), url: '#', available: false, badge: t('downloads.badges.public') },
                 { id: 'apkpure', name: 'APKPure', url: 'https://apkpure.com/p/com.qanati.player', available: true },
                 { id: 'uptodown', name: 'Uptodown', url: '#', available: false }
             ]

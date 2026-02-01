@@ -6,31 +6,31 @@ const WhyUs = () => {
 
     const comparisons = [
         {
-            feature: 'محرك التشغيل (Engine)',
-            qanati: 'MediaKit Engine (4K HDR)',
-            others: 'محركات Android الافتراضية',
-            highlights: 'سلاسة مطلقة وبدون تقطيع',
+            feature: t('whyUs.comparisons.engine.feature'),
+            qanati: t('whyUs.comparisons.engine.qanati'),
+            others: t('whyUs.comparisons.engine.others'),
+            highlights: t('whyUs.comparisons.engine.highlights'),
             status: true
         },
         {
-            feature: 'تعدد الشاشات (Multi-View)',
-            qanati: '4 شاشات متزامنة بدقة كاملة',
-            others: 'شاشة واحدة فقط',
-            highlights: 'تحكم صوتي لكل شاشة',
+            feature: t('whyUs.comparisons.multiview.feature'),
+            qanati: t('whyUs.comparisons.multiview.qanati'),
+            others: t('whyUs.comparisons.multiview.others'),
+            highlights: t('whyUs.comparisons.multiview.highlights'),
             status: true
         },
         {
-            feature: 'الأداء والعتاد',
-            qanati: 'بيانات لحظية (Live Stats)',
-            others: 'لا توجد إحصائيات',
-            highlights: 'كشف سرعة الاستجابة والرام',
+            feature: t('whyUs.comparisons.performance.feature'),
+            qanati: t('whyUs.comparisons.performance.qanati'),
+            others: t('whyUs.comparisons.performance.others'),
+            highlights: t('whyUs.comparisons.performance.highlights'),
             status: true
         },
         {
-            feature: 'توفير الموارد',
-            qanati: 'معالجة ذكية (AV1/H.265)',
-            others: 'استهلاك عالٍ للبطارية',
-            highlights: 'الحفاظ على درجة حرارة الجهاز',
+            feature: t('whyUs.comparisons.efficiency.feature'),
+            qanati: t('whyUs.comparisons.efficiency.qanati'),
+            others: t('whyUs.comparisons.efficiency.others'),
+            highlights: t('whyUs.comparisons.efficiency.highlights'),
             status: true
         }
     ];
@@ -39,9 +39,9 @@ const WhyUs = () => {
         <section className="why-us" id="why-us">
             <div className="why-us-container">
                 <div className="why-us-header">
-                    <span className="section-tag">المقارنة التقنية</span>
-                    <h2 className="why-us-title text-gradient-animate">لماذا "قناتي بلاير"؟</h2>
-                    <p className="why-us-subtitle">تحليل صريح يكشف الفرق بين البنية السيادية والحلول التجارية التقليدية</p>
+                    <span className="section-tag">{t('whyUs.tag')}</span>
+                    <h2 className="why-us-title text-gradient-animate">{t('whyUs.title')}</h2>
+                    <p className="why-us-subtitle">{t('whyUs.subtitle')}</p>
                 </div>
 
                 {/* Desktop Table View */}
@@ -49,9 +49,9 @@ const WhyUs = () => {
                     <table className="comparison-table">
                         <thead>
                             <tr>
-                                <th>الميزة</th>
-                                <th className="qanati-column">قناتي بلاير</th>
-                                <th>مشغلات أخرى</th>
+                                <th>{t('whyUs.table.feature')}</th>
+                                <th className="qanati-column">{t('whyUs.table.qanati')}</th>
+                                <th>{t('whyUs.table.others')}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,12 +62,12 @@ const WhyUs = () => {
                                         {item.feature}
                                     </td>
                                     <td className="qanati-value highlight">
-                                        <div className="check-icon">✓</div>
+                                        <div className="check-icon">{'\u2713'}</div>
                                         <span className="value-text">{item.qanati}</span>
                                         <div className="feature-highlight">{item.highlights}</div>
                                     </td>
                                     <td className="others-value">
-                                        <div className="cross-icon">✕</div>
+                                        <div className="cross-icon">{'\u2715'}</div>
                                         {item.others}
                                     </td>
                                 </tr>
@@ -83,13 +83,13 @@ const WhyUs = () => {
                             <div className="mobile-card-header">{item.feature}</div>
                             <div className="mobile-card-content">
                                 <div className="mobile-qanati-side">
-                                    <span className="side-label">قناتي بلاير</span>
+                                    <span className="side-label">{t('whyUs.labels.qanati')}</span>
                                     <p className="side-value">{item.qanati}</p>
                                     <span className="side-highlight">{item.highlights}</span>
                                 </div>
-                                <div className="vs-divider">VS</div>
+                                <div className="vs-divider">{t('whyUs.table.vs')}</div>
                                 <div className="mobile-others-side">
-                                    <span className="side-label">مشغلات أخرى</span>
+                                    <span className="side-label">{t('whyUs.labels.others')}</span>
                                     <p className="side-value">{item.others}</p>
                                 </div>
                             </div>
@@ -99,19 +99,19 @@ const WhyUs = () => {
 
                 <div className="why-us-cards">
                     <div className="why-card card-cyan">
-                        <div className="why-card-icon">⚡</div>
-                        <h4>سرعة Instant-On</h4>
-                        <p>تشغيل القناة في أقل من 0.5 ثانية بفضل تحسينات الكاش الذكية.</p>
+                        <div className="why-card-icon">{'\u26A1'}</div>
+                        <h4>{t('whyUs.cards.instantOn.title')}</h4>
+                        <p>{t('whyUs.cards.instantOn.description')}</p>
                     </div>
                     <div className="why-card card-magenta">
-                        <div className="why-card-icon">🛡️</div>
-                        <h4>سيادة تقنية</h4>
-                        <p>بنية تحتية مشفرة بالكامل تحمي بياناتك واتصالك من المتطفلين.</p>
+                        <div className="why-card-icon">{'\u{1F6E1}\uFE0F'}</div>
+                        <h4>{t('whyUs.cards.security.title')}</h4>
+                        <p>{t('whyUs.cards.security.description')}</p>
                     </div>
                     <div className="why-card card-gold">
-                        <div className="why-card-icon">📺</div>
-                        <h4>دعم 8K والـ AV1</h4>
-                        <p>دعم أحدث تقنيات الضغط لضمان أعلى جودة بأقل استهلاك إنترنت.</p>
+                        <div className="why-card-icon">{'\u{1F4FA}'}</div>
+                        <h4>{t('whyUs.cards.quality.title')}</h4>
+                        <p>{t('whyUs.cards.quality.description')}</p>
                     </div>
                 </div>
             </div>

@@ -6,28 +6,28 @@ const Trust = () => {
 
     const stats = [
         {
-            label: 'سيرفر متوافق',
+            label: t('trust.stats.servers.label'),
             value: '10,000+',
-            icon: '🌐',
-            description: 'دعم كامل لخوادم Xtream و M3U'
+            icon: '\u{1F4E1}',
+            description: t('trust.stats.servers.description')
         },
         {
-            label: 'تقييم المستخدمين',
+            label: t('trust.stats.ratings.label'),
             value: '4.9/5',
-            icon: '⭐',
-            description: 'بناءً على 1,250+ مراجعة حقيقية'
+            icon: '\u{2B50}',
+            description: t('trust.stats.ratings.description')
         },
         {
-            label: 'زمن تشغيل',
+            label: t('trust.stats.startup.label'),
             value: '0.4s',
-            icon: '⚡',
-            description: 'بفضل محرك MediaKit الثوري'
+            icon: '\u{26A1}',
+            description: t('trust.stats.startup.description')
         },
         {
-            label: 'تحديثات دورية',
-            value: 'Weekly',
-            icon: '🔄',
-            description: 'تطوير مستمر للأداء والأمان'
+            label: t('trust.stats.updates.label'),
+            value: t('trust.stats.updates.value'),
+            icon: '\u1F504',
+            description: t('trust.stats.updates.description')
         }
     ];
 
