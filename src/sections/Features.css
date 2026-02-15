@@ -104,9 +104,9 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(180px, auto);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 2rem;
 }
 
 .feature-card {
@@ -118,13 +118,12 @@
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
-    /* Scroll Reveal Initial State */
     opacity: 0;
     transform: translateY(30px);
     animation: featureReveal 0.8s forwards;
@@ -137,23 +136,6 @@
     }
 }
 
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.06), transparent 40%);
-    opacity: 0;
-    transition: opacity 0.5s;
-    pointer-events: none;
-}
-
-.feature-card:hover::before {
-    opacity: 1;
-}
-
 .feature-card:hover {
     background: rgba(13, 27, 42, 0.6);
     border-color: rgba(255, 255, 255, 0.15);
@@ -164,11 +146,96 @@
 .feature-size-large {
     grid-column: span 2;
     grid-row: span 2;
-    padding: 4rem;
+    padding: 4rem 3rem;
 }
 
 .feature-size-wide {
     grid-column: span 2;
+    padding: 3rem 2.5rem;
+}
+
+/* Card Elements */
+.feature-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .feature-icon img {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--color-silver-mist);
+}
+
+/* Semantic Color Blocks */
+.feature-color-cyan {
+    border-color: rgba(0, 180, 216, 0.3);
+}
+
+.feature-color-cyan .feature-title {
+    color: var(--color-ice-cyan);
+}
+
+.feature-color-cyan .feature-icon img {
+    filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.5));
+}
+
+.feature-color-magenta {
+    border-color: rgba(255, 0, 110, 0.3);
+}
+
+.feature-color-magenta .feature-title {
+    color: var(--color-electric-magenta);
+}
+
+.feature-color-magenta .feature-icon img {
+    filter: drop-shadow(0 0 15px rgba(255, 0, 110, 0.5));
+}
+
+.feature-color-purple {
+    border-color: rgba(114, 9, 183, 0.3);
+}
+
+.feature-color-purple .feature-title {
+    color: var(--color-soft-violet);
+}
+
+.feature-color-purple .feature-icon img {
+    filter: drop-shadow(0 0 15px rgba(114, 9, 183, 0.5));
+}
+
+.feature-color-gold {
+    border-color: rgba(255, 214, 10, 0.3);
+}
+
+.feature-color-gold .feature-title {
+    color: var(--color-antique-gold);
+}
+
+.feature-color-gold .feature-icon img {
+    filter: drop-shadow(0 0 15px rgba(255, 214, 10, 0.5));
 }
 
 @media (max-width: 1024px) {
@@ -179,11 +246,11 @@
 
 @media (max-width: 768px) {
     .features {
-        padding: 5rem 0;
+        padding: 6rem 0;
     }
 
     .features-header {
-        margin-bottom: 3.5rem;
+        margin-bottom: 4rem;
     }
 
     .features-title {
@@ -191,20 +258,27 @@
     }
 
     .features-grid {
-        gap: 1.2rem;
+        gap: 1.5rem;
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
     }
 
     .feature-card {
-        padding: 2.2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .feature-size-large,
+    .feature-size-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+        padding: 2.5rem 1.5rem;
     }
 
     .feature-title {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
     }
 
     .feature-description {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }

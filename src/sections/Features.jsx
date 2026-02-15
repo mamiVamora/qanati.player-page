@@ -11,8 +11,8 @@ const Features = () => {
         { id: 'predictive', category: 'engine', icon: '/icons/icon_hardware_intelligence.webp', color: 'gold' },
         { id: 'stats', category: 'engine', icon: '/icons/icon_server_stats.webp', color: 'cyan' },
 
-        { id: 'glassmorphism', category: 'visual', icon: '/images/3d/iphone_3d.png', color: 'cyan', size: 'wide' },
-        { id: 'multiview', category: 'visual', icon: '/icons/icon_multiview.webp', color: 'magenta' },
+        { id: 'glassmorphism', category: 'visual', icon: '/images/3d/iphone_3d.png', color: 'cyan', size: 'large' },
+        { id: 'multiview', category: 'visual', icon: '/icons/icon_multiview.webp', color: 'magenta', size: 'wide' },
         { id: 'pip', category: 'visual', icon: '/icons/icon_picture_in_picture.webp', color: 'gold' },
         { id: 'audio', category: 'visual', icon: '/icons/icon_audio_interactions.webp', color: 'purple' },
 
