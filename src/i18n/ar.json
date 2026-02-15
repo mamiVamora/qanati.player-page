@@ -89,11 +89,13 @@
             "android": "الهواتف (Android)",
             "smarttv": "الشاشات الذكية",
             "windows": "الكمبيوتر",
-            "apple": "Apple (iOS/iPadOS)"
+            "apple": "Apple (iOS/iPadOS)",
+            "linux": "لينكس (Linux)"
         },
         "downloadNow": "حمّل الآن",
         "comingSoon": "قريباً",
         "directApk": "تحميل مباشر (APK)",
+        "webApp": "تشغيل عبر (Web App)",
         "badges": {
             "public": "عام"
         }

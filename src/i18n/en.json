@@ -89,11 +89,13 @@
             "android": "Phones (Android)",
             "smarttv": "Smart TVs",
             "windows": "Computer",
-            "apple": "Apple (iOS/iPadOS)"
+            "apple": "Apple (iOS/iPadOS)",
+            "linux": "Linux"
         },
         "downloadNow": "Download Now",
         "comingSoon": "Coming Soon",
         "directApk": "Direct Download (APK)",
+        "webApp": "Run via (Web App)",
         "badges": {
             "public": "Public"
         }

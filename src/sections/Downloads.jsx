@@ -94,6 +94,32 @@ const Downloads = () => {
                     <rect x="20" y="31" width="9" height="9" fill="#05A6F0" />
                     <rect x="31" y="31" width="9" height="9" fill="#FFBA08" />
                 </svg>
+            ),
+            'xiaomi': (
+                <svg viewBox="0 0 60 60" fill="none">
+                    <rect x="15" y="15" width="30" height="30" rx="6" fill="#FF6700" />
+                    <path d="M22 25V35M22 25H27M27 25V35M27 30H22M32 25V35M37 25V35M32 25H37" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+                </svg>
+            ),
+            'linux': (
+                <svg viewBox="0 0 60 60" fill="none">
+                    <path d="M30 10C35 10 45 15 45 30C45 45 35 50 30 50C25 50 15 45 15 30C15 15 25 10 30 10Z" fill="#333" />
+                    <circle cx="23" cy="25" r="3" fill="white" />
+                    <circle cx="37" cy="25" r="3" fill="white" />
+                    <path d="M25 40Q30 45 35 40" stroke="#FFD700" strokeWidth="3" fill="none" />
+                </svg>
+            ),
+            'webapp': (
+                <svg viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="22" stroke="url(#web-grad)" strokeWidth="3" />
+                    <path d="M15 30H45M30 15V45M30 15Q38 30 30 45M30 15Q22 30 30 45" stroke="url(#web-grad)" strokeWidth="2" />
+                    <defs>
+                        <linearGradient id="web-grad" x1="15" y1="15" x2="45" y2="45">
+                            <stop offset="0%" stopColor="#00F2FF" />
+                            <stop offset="100%" stopColor="#0066FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             )
         };
         return icons[type] || icons['apk'];
@@ -120,6 +146,11 @@ const Downloads = () => {
                 <svg viewBox="0 0 24 24" fill="#0078D7">
                     <path d="M3 12V6.36L10.29 5.4V12H3M11.23 5.28L21.78 4L22 12H11.23V5.28M3 12.85H10.29V19.65L3 18.6V12.85M11.23 12.85H22V21L11.23 19.72V12.85Z" />
                 </svg>
+            ),
+            'linux': (
+                <svg viewBox="0 0 24 24" fill="#FFFFFF">
+                    <path d="M12 2C10.5 2 9.2 2.6 8.3 3.6C7.5 4.5 7 5.7 7 7C7 8.3 7.5 9.5 8.3 10.4C9.2 11.4 10.5 12 12 12C13.5 12 14.8 11.4 15.7 10.4C16.5 9.5 17 8.3 17 7C17 5.7 16.5 4.5 15.7 3.6C14.8 2.6 13.5 2 12 2M12 14C8.7 14 6 16.7 6 20V22H18V20C18 16.7 15.3 14 12 14Z" />
+                </svg>
             )
         };
         return icons[type] || null;
@@ -133,7 +164,8 @@ const Downloads = () => {
             stores: [
                 { id: 'google-play', name: 'Google Play', url: '#', available: false },
                 { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
-                { id: 'huawei', name: 'Huawei AppGallery', url: '#', available: false },
+                { id: 'huawei', name: 'Huawei AppGallery', url: 'https://appgallery.huawei.com/app/C116877361', available: true },
+                { id: 'xiaomi', name: 'Xiaomi GetApps', url: '#', available: false },
                 { id: 'apk', name: t('downloads.directApk'), url: '#', available: false, badge: t('downloads.badges.public') },
                 { id: 'apkpure', name: 'APKPure', url: 'https://apkpure.com/p/com.qanati.player', available: true },
                 { id: 'uptodown', name: 'Uptodown', url: '#', available: false }
@@ -144,7 +176,8 @@ const Downloads = () => {
             titleKey: 'downloads.categories.apple',
             categoryIcon: 'apple',
             stores: [
-                { id: 'app-store', name: 'App Store', url: '#', available: false }
+                { id: 'app-store', name: 'App Store', url: '#', available: false },
+                { id: 'webapp', name: t('downloads.webApp'), url: 'https://qanatiplayer.vercel.app/', available: true }
             ]
         },
         {
@@ -162,6 +195,14 @@ const Downloads = () => {
             categoryIcon: 'windows',
             stores: [
                 { id: 'microsoft', name: 'Microsoft Store', url: 'https://apps.microsoft.com/detail/9NH6MK4ZZRG7?hl=en-us&gl=SA&ocid=pdpshare', available: true }
+            ]
+        },
+        {
+            id: 'linux',
+            titleKey: 'downloads.categories.linux',
+            categoryIcon: 'linux',
+            stores: [
+                { id: 'linux', name: 'Linux (Generic)', url: '#', available: false }
             ]
         }
     ];
