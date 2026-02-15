@@ -1,74 +1,75 @@
 :root {
-    /* ═══════════════════════════════════════════════════════════
+        /* ═══════════════════════════════════════════════════════════
        The Masterpiece Palette - No Default Colors Policy
        ═══════════════════════════════════════════════════════════ */
 
-    /* Basic Obsidian Depth (Base) */
-    --color-obsidian: #04080F;
-    --color-obsidian-light: #0D1B2A;
-    --color-background: var(--color-obsidian);
+        /* Basic Obsidian Depth (Base) */
+        --color-oled-black: #000000;
+        --color-obsidian: #04080F;
+        --color-obsidian-light: #0D1B2A;
+        --color-background: var(--color-obsidian);
 
-    /* Metallic Silver & Platinums (Instead of White) */
-    --color-platinum: #E0E1DD;
-    --color-silver-mist: #A9D6E5;
-    --color-ghost-blue: #89C2D9;
-    --text-primary: var(--color-platinum);
-    --text-secondary: var(--color-ghost-blue);
+        /* Metallic Silver & Platinums (Instead of White) */
+        --color-platinum: #E0E1DD;
+        --color-silver-mist: #A9D6E5;
+        --color-ghost-blue: #89C2D9;
+        --text-primary: var(--color-platinum);
+        --text-secondary: var(--color-ghost-blue);
 
-    /* The "Engine" Scale (Cobalt & Ice) */
-    --color-cobalt: #0077B6;
-    --color-ice-cyan: #00B4D8;
-    --color-arctic-glow: #90E0EF;
+        /* The "Engine" Scale (Cobalt & Ice) */
+        --color-cobalt: #0077B6;
+        --color-ice-cyan: #00B4D8;
+        --color-arctic-glow: #90E0EF;
 
-    /* The "Experience" Scale (Magenta & Electric) */
-    --color-electric-magenta: #FF006E;
-    --color-neon-rose: #FB5607;
-    --color-deep-pink: #C9184A;
+        /* The "Experience" Scale (Magenta & Electric) */
+        --color-electric-magenta: #FF006E;
+        --color-neon-rose: #FB5607;
+        --color-deep-pink: #C9184A;
 
-    /* The "Logic" Scale (Royal Purples) */
-    --color-royal-purple: #3A0CA3;
-    --color-neon-purple: #7209B7;
-    --color-soft-violet: #B79CED;
+        /* The "Logic" Scale (Royal Purples) */
+        --color-royal-purple: #3A0CA3;
+        --color-neon-purple: #7209B7;
+        --color-soft-violet: #B79CED;
 
-    /* The "Luxury" Scale (Antique Golds) */
-    --color-antique-gold: #FFD60A;
-    --color-bronze-sun: #FFC300;
-    --color-copper-glow: #D00000;
+        /* The "Luxury" Scale (Antique Golds) */
+        --color-antique-gold: #FFD60A;
+        --color-bronze-sun: #FFC300;
+        --color-copper-glow: #D00000;
 
-    /* Semantic Aliases */
-    --color-cyan: var(--color-ice-cyan);
-    --color-magenta: var(--color-electric-magenta);
-    --color-purple: var(--color-neon-purple);
-    --color-gold: var(--color-antique-gold);
+        /* Semantic Aliases */
+        --color-cyan: var(--color-ice-cyan);
+        --color-magenta: var(--color-electric-magenta);
+        --color-purple: var(--color-neon-purple);
+        --color-gold: var(--color-antique-gold);
 
-    /* ═══════════════════════════════════════════════════════════
+        /* ═══════════════════════════════════════════════════════════
        Gradients & Glass
        ═══════════════════════════════════════════════════════════ */
 
-    --glass-bg: rgba(13, 27, 42, 0.6);
-    --glass-bg-hover: rgba(13, 27, 42, 0.8);
-    --glass-border: rgba(144, 224, 239, 0.2);
+        --glass-bg: rgba(13, 27, 42, 0.6);
+        --glass-bg-hover: rgba(13, 27, 42, 0.8);
+        --glass-border: rgba(144, 224, 239, 0.2);
 
-    --gradient-masterpiece: linear-gradient(135deg,
-            var(--color-obsidian) 0%,
-            var(--color-royal-purple) 50%,
-            var(--color-obsidian) 100%);
+        --gradient-masterpiece: linear-gradient(135deg,
+                        var(--color-obsidian) 0%,
+                        var(--color-royal-purple) 50%,
+                        var(--color-obsidian) 100%);
 
-    --gradient-industrial-gold: linear-gradient(135deg,
-            var(--color-antique-gold) 0%,
-            var(--color-bronze-sun) 100%);
+        --gradient-industrial-gold: linear-gradient(135deg,
+                        var(--color-antique-gold) 0%,
+                        var(--color-bronze-sun) 100%);
 
-    --gradient-arctic: linear-gradient(135deg,
-            var(--color-cobalt) 0%,
-            var(--color-ice-cyan) 100%);
+        --gradient-arctic: linear-gradient(135deg,
+                        var(--color-cobalt) 0%,
+                        var(--color-ice-cyan) 100%);
 
-    /* ═══════════════════════════════════════════════════════════
+        /* ═══════════════════════════════════════════════════════════
        Glows & Shadows (Soft Diffuse)
        ═══════════════════════════════════════════════════════════ */
 
-    --glow-cyan: 0 0 30px rgba(0, 180, 216, 0.4);
-    --glow-magenta: 0 0 30px rgba(255, 0, 110, 0.4);
-    --glow-gold: 0 0 30px rgba(255, 214, 10, 0.4);
+        --glow-cyan: 0 0 30px rgba(0, 180, 216, 0.4);
+        --glow-magenta: 0 0 30px rgba(255, 0, 110, 0.4);
+        --glow-gold: 0 0 30px rgba(255, 214, 10, 0.4);
 
-    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.8);
+        --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.8);
 }

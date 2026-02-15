@@ -6,13 +6,28 @@
     padding: 10rem 0;
     position: relative;
     overflow: hidden;
-    background: var(--color-obsidian);
+    background: var(--color-oled-black);
+}
+
+.features::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 180, 216, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .features-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -22,19 +37,18 @@
 .features-header {
     text-align: center;
     margin-bottom: 5rem;
-    /* Reduced from 8rem */
 }
 
 .features-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
     color: var(--color-platinum);
+    letter-spacing: -2px;
 }
 
 .features-subtitle {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
-    /* Slightly larger for emphasis */
     color: var(--color-silver-mist);
     font-weight: 600;
     max-width: 900px;
@@ -48,7 +62,6 @@
     font-weight: 900;
     text-shadow: 0 0 20px rgba(255, 214, 10, 0.4);
     display: inline-block;
-    padding: 0 0.2rem;
 }
 
 .manifesto-cyan {
@@ -56,207 +69,142 @@
     font-weight: 900;
     text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
     display: inline-block;
-    padding: 0 0.2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Category - Semantic Expression
+   Bento Grid System
    ═══════════════════════════════════════════════════════════ */
 
 .features-category {
-    margin-bottom: 6rem;
-    /* Reduced from 8rem */
+    margin-bottom: 8rem;
 }
 
 .category-title {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    /* Reduced from 2.5rem */
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-weight: 800;
     text-align: center;
-    margin-bottom: 3rem;
-    /* Reduced from 4rem */
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Category: Engine (Cobalt & Ice) */
-.features-category:nth-of-type(1) .category-title {
-    color: var(--color-ice-cyan);
-    text-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: currentColor;
+    border-radius: 2px;
+    opacity: 0.3;
 }
-
-/* Category: Visual (Electric Magenta) */
-.features-category:nth-of-type(2) .category-title {
-    color: var(--color-electric-magenta);
-    text-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
-}
-
-/* Category: Control (Royal Purple) */
-.features-category:nth-of-type(3) .category-title {
-    color: var(--color-soft-violet);
-    text-shadow: 0 0 20px rgba(183, 156, 237, 0.3);
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Feature Card - Content-Aware Decoration
-   ═══════════════════════════════════════════════════════════ */
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* Slightly smaller min-width */
-    gap: 2rem;
-    /* Reduced from 2.5rem */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 1.5rem;
 }
 
 .feature-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    /* Reduced from 24px */
-    padding: 2.5rem 1.5rem;
-    /* Reduced from 3rem 2rem */
+    background: rgba(13, 27, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    /* Scroll Reveal Initial State */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: featureReveal 0.8s forwards;
 }
 
-.feature-card:active {
-    transform: scale(0.96);
-    background: rgba(13, 27, 42, 0.8);
+@keyframes featureReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Semantic Icon Styling */
-.feature-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 2rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature-icon img {
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.06), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
 }
 
-.feature-card:hover .feature-icon img {
-    transform: translateY(-10px) scale(1.1);
+.feature-card:hover::before {
+    opacity: 1;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   Semantic Color Blocks (No Default Gray)
-   ═══════════════════════════════════════════════════════════ */
-
-/* Engine/Cyan cards */
-.feature-color-cyan {
-    border-color: rgba(0, 180, 216, 0.3);
+.feature-card:hover {
+    background: rgba(13, 27, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.feature-color-cyan .feature-title {
-    color: var(--color-ice-cyan);
+/* Bento Sizing Logic */
+.feature-size-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 4rem;
 }
 
-.feature-color-cyan .feature-description {
-    color: var(--color-ghost-blue);
+.feature-size-wide {
+    grid-column: span 2;
 }
 
-.feature-color-cyan .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.5));
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-
-/* Visual/Magenta cards */
-.feature-color-magenta {
-    border-color: rgba(255, 0, 110, 0.3);
-}
-
-.feature-color-magenta .feature-title {
-    color: var(--color-electric-magenta);
-}
-
-.feature-color-magenta .feature-description {
-    color: rgba(255, 0, 110, 0.7);
-}
-
-.feature-color-magenta .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(255, 0, 110, 0.5));
-}
-
-/* Control/Purple cards */
-.feature-color-purple {
-    border-color: rgba(114, 9, 183, 0.3);
-}
-
-.feature-color-purple .feature-title {
-    color: var(--color-soft-violet);
-}
-
-.feature-color-purple .feature-description {
-    color: rgba(183, 156, 237, 0.7);
-}
-
-.feature-color-purple .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(114, 9, 183, 0.5));
-}
-
-/* Luxury/Gold cards */
-.feature-color-gold {
-    border-color: rgba(255, 214, 10, 0.3);
-}
-
-.feature-color-gold .feature-title {
-    color: var(--color-antique-gold);
-}
-
-.feature-color-gold .feature-description {
-    color: rgba(255, 214, 10, 0.7);
-}
-
-.feature-color-gold .feature-icon img {
-    filter: drop-shadow(0 0 15px rgba(255, 214, 10, 0.5));
-}
-
-.feature-title {
-    font-size: 1.35rem;
-    /* Reduced from 1.5rem */
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    /* Reduced from 1rem */
-}
-
-.feature-description {
-    font-size: 0.95rem;
-    /* Reduced from 1rem */
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   Artistic Responsive
-   ═══════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
     .features {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 
     .features-header {
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .features-title {
+        font-size: clamp(2.2rem, 10vw, 3rem);
     }
 
     .features-grid {
-        gap: 1.5rem;
+        gap: 1.2rem;
         grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
 
     .feature-card {
-        padding: 2rem 1.5rem;
-        border-radius: 20px;
+        padding: 2.2rem 1.5rem;
+    }
+
+    .feature-title {
+        font-size: 1.25rem;
+    }
+
+    .feature-description {
+        font-size: 0.9rem;
     }
 }
