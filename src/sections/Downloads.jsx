@@ -183,9 +183,10 @@ const Downloads = () => {
                 { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
                 { id: 'huawei', name: 'Huawei AppGallery', url: 'https://appgallery.huawei.com/app/C116877361', available: true },
                 { id: 'xiaomi', name: 'Xiaomi GetApps', url: '#', available: false },
-                { id: 'apk', name: t('downloads.directApk'), url: 'https://raw.githubusercontent.com/mamiVamora/qanati-downloads/main/latest.json', available: true, badge: t('downloads.badges.public') },
+                { id: 'apk', name: t('downloads.directApk'), url: 'https://raw.githubusercontent.com/mamiVamora/qanati-downloads/main/qanati-player-sideload.apk', available: true, badge: t('downloads.badges.public') },
                 { id: 'apkpure', name: 'APKPure', url: 'https://apkpure.com/p/com.qanati.player', available: true },
-                { id: 'uptodown', name: 'Uptodown', url: '#', available: false }
+                { id: 'uptodown', name: 'Uptodown', url: '#', available: false },
+                { id: 'palmstore', name: 'Palmstore (Tecno, Infinix, itel)', url: '#', available: false }
             ]
         },
         {
@@ -220,14 +221,6 @@ const Downloads = () => {
             categoryIcon: 'linux',
             stores: [
                 { id: 'linux', name: 'Linux (Generic)', url: '#', available: false }
-            ]
-        },
-        {
-            id: 'palmstore',
-            titleKey: 'downloads.categories.palmstore',
-            categoryIcon: 'palmstore',
-            stores: [
-                { id: 'palmstore', name: 'Palmstore', url: '#', available: false }
             ]
         }
     ];
