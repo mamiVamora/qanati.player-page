@@ -120,6 +120,18 @@ const Downloads = () => {
                         </linearGradient>
                     </defs>
                 </svg>
+            ),
+            'palmstore': (
+                <svg viewBox="0 0 60 60" fill="none">
+                    <rect x="12" y="12" width="36" height="36" rx="10" fill="url(#palm-grad)" />
+                    <path d="M24 22V38M30 18V38M36 24V38" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                    <defs>
+                        <linearGradient id="palm-grad" x1="12" y1="12" x2="48" y2="48">
+                            <stop offset="0%" stopColor="#FF6B35" />
+                            <stop offset="100%" stopColor="#FF3E00" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             )
         };
         return icons[type] || icons['apk'];
@@ -151,6 +163,11 @@ const Downloads = () => {
                 <svg viewBox="0 0 24 24" fill="#FFFFFF">
                     <path d="M12 2C10.5 2 9.2 2.6 8.3 3.6C7.5 4.5 7 5.7 7 7C7 8.3 7.5 9.5 8.3 10.4C9.2 11.4 10.5 12 12 12C13.5 12 14.8 11.4 15.7 10.4C16.5 9.5 17 8.3 17 7C17 5.7 16.5 4.5 15.7 3.6C14.8 2.6 13.5 2 12 2M12 14C8.7 14 6 16.7 6 20V22H18V20C18 16.7 15.3 14 12 14Z" />
                 </svg>
+            ),
+            'palmstore': (
+                <svg viewBox="0 0 24 24" fill="#FF6B35">
+                    <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+                </svg>
             )
         };
         return icons[type] || null;
@@ -166,7 +183,7 @@ const Downloads = () => {
                 { id: 'amazon', name: 'Amazon Appstore', url: '#', available: false },
                 { id: 'huawei', name: 'Huawei AppGallery', url: 'https://appgallery.huawei.com/app/C116877361', available: true },
                 { id: 'xiaomi', name: 'Xiaomi GetApps', url: '#', available: false },
-                { id: 'apk', name: t('downloads.directApk'), url: '#', available: false, badge: t('downloads.badges.public') },
+                { id: 'apk', name: t('downloads.directApk'), url: 'https://raw.githubusercontent.com/mamiVamora/qanati-downloads/main/latest.json', available: true, badge: t('downloads.badges.public') },
                 { id: 'apkpure', name: 'APKPure', url: 'https://apkpure.com/p/com.qanati.player', available: true },
                 { id: 'uptodown', name: 'Uptodown', url: '#', available: false }
             ]
@@ -203,6 +220,14 @@ const Downloads = () => {
             categoryIcon: 'linux',
             stores: [
                 { id: 'linux', name: 'Linux (Generic)', url: '#', available: false }
+            ]
+        },
+        {
+            id: 'palmstore',
+            titleKey: 'downloads.categories.palmstore',
+            categoryIcon: 'palmstore',
+            stores: [
+                { id: 'palmstore', name: 'Palmstore', url: '#', available: false }
             ]
         }
     ];

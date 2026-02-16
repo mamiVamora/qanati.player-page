@@ -90,7 +90,8 @@
             "smarttv": "الشاشات الذكية",
             "windows": "الكمبيوتر",
             "apple": "Apple (iOS/iPadOS)",
-            "linux": "لينكس (Linux)"
+            "linux": "لينكس (Linux)",
+            "palmstore": "Tecno / Infinix / itel"
         },
         "downloadNow": "حمّل الآن",
         "comingSoon": "قريباً",

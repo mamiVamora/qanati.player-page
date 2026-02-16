@@ -90,7 +90,8 @@
             "smarttv": "Smart TVs",
             "windows": "Computer",
             "apple": "Apple (iOS/iPadOS)",
-            "linux": "Linux"
+            "linux": "Linux",
+            "palmstore": "Tecno / Infinix / itel"
         },
         "downloadNow": "Download Now",
         "comingSoon": "Coming Soon",
